@@ -21,12 +21,12 @@ Benchmark instances are obtained from **CVRPLIB**.
 
 Five instances from the Augerat A and B sets are evaluated:
 
-| Instance | Customers | Vehicles | Role |
+| Instance | Customers | Vehicles | Deport |
 |---|---:|---:|---|
 | A-n33-k6 | 32 | 6 | Small validation instance |
-| B-n41-k6 | 40 | 6 | Benchmark |
 | A-n48-k7 | 47 | 7 | Benchmark |
 | A-n65-k9 | 64 | 9 | Benchmark |
+| B-n41-k6 | 40 | 6 | Benchmark |
 | B-n68-k9 | 67 | 9 | Benchmark |
 
 `A-n33-k6` is used as a small validation instance, while the remaining instances provide the primary performance comparison.
