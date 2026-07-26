@@ -70,13 +70,14 @@ The underlying CVRP formulation and computational settings were kept fixed while
 
 Solution quality is evaluated relative to the published best-known solution (BKS) for each CVRPLIB instance.
 
-| Instance | BKS | Best OR-Tools Solution | Gap | Best Configuration |
+| Instance | BKS | Best OR-Tools Solution | Optimality Gap | Best Configuration |
 |---|---:|---:|---:|---|
-| A-n33-k6 | 742 | 742 | 0.00% | Parallel Cheapest Insertion + Guided Local Search |
-| A-n48-k7 | TBD | TBD | 0.00% | TBD |
+| A-n48-k7 | 1073 | 1073 | 0.00% | Parallel Cheapest Insertion + Guided Local Search |
 | A-n65-k9 | 1174 | 1184 | 0.85% | Parallel Cheapest Insertion / Global Cheapest Arc + Guided Local Search |
-| B-n41-k6 | TBD | TBD | 0.00% | TBD |
-| B-n68-k9 | TBD | TBD | ~1% | TBD |
+| B-n41-k6 | 829 | 829 | 0.00% | TBD |
+| B-n68-k9 | 1272 | 1289 | ~1.34% | TBD |
+| X-n110-k13 | 14971 | 15150 | ~1.20% | TBD |
+| X-n129-k18 | 28940 | 30161 | ~4.22% | TBD |
 
 The optimality gap is calculated as:
 
