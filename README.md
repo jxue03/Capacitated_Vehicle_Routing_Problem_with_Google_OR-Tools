@@ -1,4 +1,4 @@
-# Capacitated Vehicle Routing Problem with Google OR-Tools
+# Capacitated Vehicle Routing Problems solved with Google OR-Tools
 
 This project implements and evaluates the **Capacitated Vehicle Routing Problem (CVRP)** using Google OR-Tools. Standard benchmark instances from CVRPLIB are used to evaluate different first-solution strategies and local-search metaheuristics.
 
@@ -19,7 +19,7 @@ The model requires that:
 
 Benchmark instances are obtained from **CVRPLIB**.
 
-Five instances from the Augerat A and B sets are evaluated:
+Six instances from the A, B, and X sets are evaluated:
 
 | Instance | # Customers | # Vehicles | Vehicle Capacity | Total Fleet Capacity | Total Demand | Unused Capacity | 
 |---|---:|---:|---:|---:|---:|---|
