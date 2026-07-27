@@ -72,12 +72,10 @@ Three local-search metaheuristics are then evaluated for improving the construct
                    
 - `SIMULATED_ANNEALING`: Probabilistically accepts some worsening moves, particularly earlier in the search, to escape local optima and explore alternative solutions.
            
-Preliminary experimentation indicated that these strategies performed competitively across the selected CVRPLIB instances, while limiting the comparison to four methods kept the analysis manageable and avoided strategies that provided limited additional insight or were less relevant to the scope of the study.
+Preliminary experimentation indicated that these strategies performed competitively across the selected CVRPLIB instances. Other strategies were explored during initial testing but were excluded from the final benchmark to keep the analysis manageable, as they offered limited additional methodological diversity, were less consistently competitive, or were less relevant to the scope of the study.
        
 ## Results
-
-Each instances are evaluated in two stages: first-solution construction heuristics and local-search metaheuristics.
-    
+                  
 `Guided Local Search` demonstrated the most consistent performance across the tested instances, suggesting greater robustness than `Tabu Search` and `Simulated Annealing` under the experimental settings. As a representative example, the table below presents the local-search comparison for A-n48-k7. Similar comparisons were conducted across all benchmark instances, with Guided Local Search consistently producing the strongest results.
    
 | A-n48-k7 | `Guided Local Search` | `Tabu Local Search` | `Simulated Annealing` |
@@ -87,7 +85,8 @@ Each instances are evaluated in two stages: first-solution construction heuristi
 | `Savings` | **1073** | 1097 | 1097 | 
 | `Local Cheapest Insertion` | 1084 | 1127 | 1192 |
 
-After the local-search metaheuristics is set to `Guided Local Search`, first-solution construction heuristics are also evaluated across all instances.
+After the local-search metaheuristics is set to `Guided Local Search`, first-solution construction heuristics are also evaluated across all instances.       
+The best solutions are highlighted in bold. 
      
 | Instances | A-n48-k7 | A-n65-k9 | B-n41-k6 | B-n68-k9 | X-n110-k13 | X-n129-k18 |
 |---|---:|---:|---:|---:|---:|---|
@@ -96,11 +95,8 @@ After the local-search metaheuristics is set to `Guided Local Search`, first-sol
 | `Savings` | **1073** | 1195 | 840 | 1307 | 15554 | 30889 | 
 | `Local Cheapest Insertion` | 1084 | **1184** | **829** | 1311 | **15150** | 30970 | 
 
-
-
-
-Solution quality is evaluated relative to the published best-known solution (BKS) for each CVRPLIB instance.
-          
+Then the best found solution are evaluated relative to the published best-known solution (BKS) for each CVRPLIB instance.
+                        
 | Instance | Best Known Solution (BKS) | Best OR-Tools Solution | Optimality Gap | Best Configuration |
 |---|---:|---:|---:|---|
 | A-n48-k7 | 1073 | 1073 | 0.00% | `Path Cheapest Arc` or `Savings` + `Guided Local Search` |
