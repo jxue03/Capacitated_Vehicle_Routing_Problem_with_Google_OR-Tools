@@ -145,9 +145,9 @@ The best solution obtained for each instance was evaluated relative to its publi
 | A-n48-k7 | 1073 | 1073 | 0.00% | `Path Cheapest Arc` or `Savings` + `Guided Local Search` |
 | A-n65-k9 | 1174 | 1184 | 0.85% | `Parallel Cheapest Insertion` or `Local Cheapest Insertion` + `Guided Local Search` |
 | B-n41-k6 | 829 | 829 | 0.00% | `Path Cheapest Arc` or `Local Cheapest Insertion` + `Guided Local Search` |
-| B-n68-k9 | 1272 | 1289 | ~1.34% | `Path Cheapest Arc` + `Guided Local Search`|
-| X-n110-k13 | 14971 | 15150 | ~1.20% | `Local Cheapest Insertion` + `Guided Local Search` |
-| X-n129-k18 | 28940 | 30161 | ~4.22% | `Parallel Cheapest Insertion` + `Guided Local Search` |
+| B-n68-k9 | 1272 | 1289 | 1.34% | `Path Cheapest Arc` + `Guided Local Search`|
+| X-n110-k13 | 14971 | 15150 | 1.20% | `Local Cheapest Insertion` + `Guided Local Search` |
+| X-n129-k18 | 28940 | 30161 | 4.22% | `Parallel Cheapest Insertion` + `Guided Local Search` |
 
 The optimality gap is calculated as:
 
@@ -158,17 +158,18 @@ The results show that OR-Tools matched the published BKS exactly for A-n48-k7 an
 The results show that the tested OR-Tools search configurations were capable of producing high-quality solutions across all six CVRPLIB instances, although the degree of success varied by instance. The published BKS was matched exactly for A-n48-k7 and B-n41-k6, while the solutions for A-n65-k9, B-n68-k9, and X-n110-k13 remained close to 1% of their respective benchmark values. X-n129-k18 proved more challenging under the same experimental framework, with the best tested configuration producing a 4.22% gap.
 
 #### Routing Plots:
+           
 <table>
   <tr>
     <td align="center">
       <img src="RoutingPlots/A-n48-k7_PATH_CHEAPEST_ARC_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>A-n48-k7</b><br>
-      <sub>PATH_CHEAPEST_ARC + GLS</sub>
+      <sub>PATH_CHEAPEST_ARC + GUIDED_LOCAL_SEARCH</sub>
     </td>
     <td align="center">
       <img src="RoutingPlots/A-n65-k9_PARALLEL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>A-n65-k9</b><br>
-      <sub>PARALLEL_CHEAPEST_INSERTION + GLS</sub>
+      <sub>PARALLEL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH</sub>
     </td>
   </tr>
 
@@ -176,12 +177,12 @@ The results show that the tested OR-Tools search configurations were capable of 
     <td align="center">
       <img src="RoutingPlots/B-n41-k6_LOCAL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>B-n41-k6</b><br>
-      <sub>LOCAL_CHEAPEST_INSERTION + GLS</sub>
+      <sub>LOCAL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH</sub>
     </td>
     <td align="center">
       <img src="RoutingPlots/B-n68-k9_PATH_CHEAPEST_ARC_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>B-n68-k9</b><br>
-      <sub>PATH_CHEAPEST_ARC + GLS</sub>
+      <sub>PATH_CHEAPEST_ARC + GUIDED_LOCAL_SEARCH</sub>
     </td>
   </tr>
 
@@ -189,16 +190,16 @@ The results show that the tested OR-Tools search configurations were capable of 
     <td align="center">
       <img src="RoutingPlots/X-n110-k13_LOCAL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>X-n110-k13</b><br>
-      <sub>LOCAL_CHEAPEST_INSERTION + GLS</sub>
+      <sub>LOCAL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH</sub>
     </td>
     <td align="center">
       <img src="RoutingPlots/X-n129-k18_PARALLEL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>X-n129-k18</b><br>
-      <sub>PARALLEL_CHEAPEST_INSERTION + GLS</sub>
+      <sub>PARALLEL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH</sub>
     </td>
   </tr>
 </table>
-
+             
 #### Key Findings:
 
 **`Guided Local Search` was a robust choice of metaheuristic**  
