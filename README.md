@@ -40,7 +40,7 @@ The model requires that:
 Let:
 
 - $V = \{0,1,\ldots,n\}$ be the set of nodes, where node $0$ represents the depot.
-- $C = V \setminus \{{0\}}$ be the set of customers.
+- $C = V \ {0}  be the set of customers.
 - $c_{ij}$ be the travel distance from node $i$ to node $j$.
 - $q_i$ be the demand of customer $i$.
 - $Q$ be the capacity of each vehicle.
