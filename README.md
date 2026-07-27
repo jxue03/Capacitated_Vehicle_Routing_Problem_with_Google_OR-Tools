@@ -54,7 +54,7 @@ x_{ijk} =
 0, & \text{otherwise,}
 \end{cases}
 \qquad
-\forall i,j \in V,\; i \neq j,\; k \in K
+\forall i,j \in V\; i \neq j\; k \in K
 $$
                  
 ### Objective Function
