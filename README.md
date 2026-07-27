@@ -33,14 +33,14 @@ The model requires that:
 - Each route starts and ends at the depot.
 - The total demand assigned to a vehicle does not exceed its capacity.
 - Total travel distance across all vehicle routes is minimized.
-
            
 ## Mathematical Formulation
 
 Let:
 
 - $V = \{0,1,\ldots,n\}$ be the set of nodes, where node $0$ represents the depot.
-- $C = V \setminus \lbrace 0 \rbrace$ is the set of customers.
+- $C = V \setminus \lbrace 0 \rbrace$ is the set of customers. 
+- $K = \{1,\ldots,m\}$ be the set of vehicles.
 - $c_{ij}$ be the travel distance from node $i$ to node $j$.
 - $q_i$ be the demand of customer $i$.
 - $Q$ be the capacity of each vehicle.
@@ -48,9 +48,9 @@ Let:
 Define the binary decision variable:
 
 $$
-x_{ij} =
+x_{ijk} =
 \begin{cases}
-1, & \text{if vehicle } \text{ travels directly from node } i \text{ to node } j,\\
+1, & \text{if vehicle } k \text{ travels directly from node } i \text{ to node } j,\\
 0, & \text{otherwise.}
 \end{cases}
 $$
@@ -60,9 +60,10 @@ $$
 The objective is to minimize the total distance traveled across all vehicle routes:
 
 $$
-\min \sum_{i \in V}
-\sum_{\substack{j \in V \\ ,j \neq i}}
-c_{ij}x_{ij}
+\min \sum_{k \in K}
+\sum_{i \in V}
+\sum_{\substack{j \in V \\ , j \neq i}} 
+c_{ij}x_{ijk}
 $$
 
 ### Customer Coverage
@@ -71,7 +72,7 @@ Each customer must be visited exactly once by one vehicle:
 
 $$
 \sum_{k \in K}
-\sum_{\substack{j \in V \\ , j \neq i}}
+\sum_{\substack{j \in V \\,  j \neq i}} 
 x_{ijk} = 1
 \qquad \forall i \in C
 $$
@@ -83,7 +84,7 @@ The total demand assigned to each vehicle cannot exceed its capacity:
 $$
 \sum_{i \in C}
 q_i
-\sum_{\substack{j \in V \\ ,j \neq i}}
+\sum_{\substack{j \in V \\ , j \neq i}} 
 x_{ijk}
 \leq Q
 \qquad \forall k \in K
@@ -94,24 +95,25 @@ $$
 For each vehicle, entering a customer node requires leaving that node:
 
 $$
-\sum_{\substack{j \in V \\, j \neq i}} x_{ijk} = \sum_{\substack{j \in V \\ ,j \neq i}} x_{jik} \qquad \forall i \in C, k \in K
-$$
-
+\sum_{\substack{j \in V \\ j \neq i}} x_{ijk} = \sum_{\substack{j \in V \\ j \neq i}} x_{jik} \qquad \forall i \in C,\; k \in K
+$$ 
 
 ### Depot Constraints
 
 Each used vehicle departs from and returns to the depot at most once:
 
 $$
-\sum_{j \in C} x_{0j} \leq 1
+\sum_{j \in C} x_{0jk} \leq 1
+\qquad \forall k \in K
 $$
 
 $$
-\sum_{i \in C} x_{i0} \leq 1
+\sum_{i \in C} x_{i0k} \leq 1
+\qquad \forall k \in K
 $$
-
-**Note:** This formulation summarizes the primary CVRP objective and constraints represented by the OR-Tools routing model. Route continuity and connectivity are handled internally by `RoutingModel` rather than through an explicitly implemented arc-based MIP formulation.
-                      
+              
+**Note:** This formulation summarizes the primary CVRP objective and constraints represented by the OR-Tools routing model. Route continuity and connectivity are handled internally by `RoutingModel` rather than through an explicitly implemented arc-based MIP formulation. 
+               
 ## Implementation and Framework
 
 The implementation includes:
