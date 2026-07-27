@@ -73,11 +73,11 @@ Solution quality is evaluated relative to the published best-known solution (BKS
 | Instance | BKS | Best OR-Tools Solution | Optimality Gap | Best Configuration |
 |---|---:|---:|---:|---|
 | A-n48-k7 | 1073 | 1073 | 0.00% | `Path Cheapest Arc` or `Savings` + `Guided Local Search` |
-| A-n65-k9 | 1174 | 1184 | 0.85% | `Parallel Cheapest Insertion` or `Parallel Cheapest Insertion` + `Guided Local Search` |
-| B-n41-k6 | 829 | 829 | 0.00% | TBD |
-| B-n68-k9 | 1272 | 1289 | ~1.34% | TBD |
-| X-n110-k13 | 14971 | 15150 | ~1.20% | TBD |
-| X-n129-k18 | 28940 | 30161 | ~4.22% | TBD |
+| A-n65-k9 | 1174 | 1184 | 0.85% | `Parallel Cheapest Insertion` or `Local Cheapest Insertion` + `Guided Local Search` |
+| B-n41-k6 | 829 | 829 | 0.00% | `Path Cheapest Arc` or `Local Cheapest Insertion` + `Guided Local Search` |
+| B-n68-k9 | 1272 | 1289 | ~1.34% | `Parallel Cheapest Insertion` or `Path Cheapest Arc` + `Guided Local Search`|
+| X-n110-k13 | 14971 | 15150 | ~1.20% | `Local Cheapest Insertion` + `Guided Local Search` |
+| X-n129-k18 | 28940 | 30161 | ~4.22% | `Parallel Cheapest Insertion` + `Guided Local Search` |
 
 The optimality gap is calculated as:
 
