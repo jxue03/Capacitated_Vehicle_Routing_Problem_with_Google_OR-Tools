@@ -40,7 +40,17 @@ Distance of the route: 39
 Load of the route: 43                
 
 **Route for vehicle 7:**           
-0 Load(0) -> 37 Load(23) -> 3 Load(28) -> 20 Load(42) -> 26 Load(54) -> 39 Load(70) -> 8 Load(88) -> 7 Load(90) -> 40 Load(99) -> 0 Load(99)                  
+0 Load(0) -> 37 Load(23) -> 3 Load(28) -> 20 Load(42) -> 26 Load(54) -> 39 Load(70) -> 8 Load(88) -> 7 Load(90) -> 40 Load(99) -> 0 Load(99)               
 Distance of the route: 206            
 Load of the route: 99             
 
+======================================================================
+SUMMARY
+======================================================================
+Used vehicles: 7
+Total distance: 1073
+Total delivered demand: 626
+Expected total demand: 626
+Capacity per vehicle: 100
+Demand check: PASSED
+Objective check: PASSED
