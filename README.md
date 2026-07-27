@@ -157,6 +157,19 @@ The results show that OR-Tools matched the published BKS exactly for A-n48-k7 an
 
 The results show that the tested OR-Tools search configurations were capable of producing high-quality solutions across all six CVRPLIB instances, although the degree of success varied by instance. The published BKS was matched exactly for A-n48-k7 and B-n41-k6, while the solutions for A-n65-k9, B-n68-k9, and X-n110-k13 remained close to 1% of their respective benchmark values. X-n129-k18 proved more challenging under the same experimental framework, with the best tested configuration producing a 4.22% gap.
 
+#### Routing Plots:
+![A-n48-k7](RoutingPlots/A-n48-k7_PATH_CHEAPEST_ARC_and_GUIDED_LOCAL_SEARCH.png)
+
+![A-n65-k9](RoutingPlots/A-n65-k9_PARALLEL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png)
+
+![B-n41-k6](RoutingPlots/B-n41-k6_LOCAL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png)
+
+![B-n68-k9](RoutingPlots/B-n68-k9_PATH_CHEAPEST_ARC_and_GUIDED_LOCAL_SEARCH.png)
+
+![X-n110-k13](RoutingPlots/X-n110-k13_LOCAL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png)
+
+![X-n129-k18](RoutingPlots/X-n129-k18_PARALLEL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png)
+
 #### Key Findings:
 
 **`Guided Local Search` was a robust choice of metaheuristic**  
