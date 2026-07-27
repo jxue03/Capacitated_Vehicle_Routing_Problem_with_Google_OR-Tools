@@ -27,10 +27,12 @@ Six instances from the A, B, and X sets are evaluated:
 | A-n65-k9 | 64 | 9 | 100 | 900 | 877 | 23 |
 | B-n41-k6 | 40 | 6 | 100 | 600 | 567 | 33 |
 | B-n68-k9 | 67 | 9 | 100 | 900 | 837 | 63 |
-| X-n110-k13 | 40 | 6 | 66 | 858 | 816 | 42 |
-| X-n129-k18 | 67 | 9 | 39 | 702 | 665 | 37 |
+| X-n110-k13 | 109 | 13 | 66 | 858 | 816 | 42 |
+| X-n129-k18 | 128 | 18 | 39 | 702 | 665 | 37 |
 
-`A-n33-k6` is used as a small validation instance, while the remaining instances provide the primary performance comparison.
+A sets are...
+B sets are...
+X sets are...
 
 ## OR-Tools Implementation
 
