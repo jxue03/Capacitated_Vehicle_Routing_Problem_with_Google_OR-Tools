@@ -103,7 +103,8 @@ The identical 1184 result from multiple construction strategies on `A-n65-k9` su
 ```text
 cvrp-ortools/
 │
-├── import
+├── import packages and solver
+│
 ├── read instance/
 │   ├── A-n48-k7.vrp
 │   ├── A-n65-k9.vrp
@@ -111,13 +112,21 @@ cvrp-ortools/
 │   ├── B-n68-k9.vrp
 │   ├── X-n110-k13.vrp
 │   └── X-n129-k18.vrp
-├── create data model
+│
+├── create_data_model
+│
+├── print instance summary
+│
 ├── build_routing_model/
-│   ├── distance callback
-│   └── demand callback
-├── create search parameters/
+│   ├── create RoutingIndexManager
+│   ├── distance_callback
+│   └── demand_callback
+│
+├── create_search_parameters/
 │   ├── first_solution_strategy 
 │   └── local_search_metaheuristic
+│
+├── set time limit
 ├── print routing status
 │
 └── results/
