@@ -80,10 +80,10 @@ Each instances are evaluated in two stages: first-solution construction heuristi
 
 | Instances | A-n48-k7 | A-n65-k9 | B-n41-k6 | B-n68-k9 | X-n110-k13 | X-n129-k18 |
 |---|---:|---:|---:|---:|---:|---|
-| `Parallel Cheapest Insertion` | 1088 | 1116 | 1152 | 1152 | 1152 | 1152 | 
-| `Path Cheapest Arc` | **1073** | 1102 | 1221 |1152 | 1152 | 1152 | 
-| `Savings` | **1073** | 1097 | 1097 | 1152 | 1152 | 1152 | 
-| `Local Cheapest Insertion` | 1084 | 1127 | 1192 |1152 | 1152 | 1152 | 
+| `Parallel Cheapest Insertion` | 1088 | 1184 | 843 | 1290 | 15449 | 30161 | 
+| `Path Cheapest Arc` | **1073** | 1218 | 829 | 1289 | 15260 | 30506 | 
+| `Savings` | **1073** | 1195 | 840 | 1307 | 15554 | 30889 | 
+| `Local Cheapest Insertion` | 1084 | 1184 | 829 | 1311 | 15150 | 30970 | 
 
 
 
