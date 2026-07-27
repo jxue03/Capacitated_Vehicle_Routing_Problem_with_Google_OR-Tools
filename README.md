@@ -72,8 +72,8 @@ Solution quality is evaluated relative to the published best-known solution (BKS
 
 | Instance | BKS | Best OR-Tools Solution | Optimality Gap | Best Configuration |
 |---|---:|---:|---:|---|
-| A-n48-k7 | 1073 | 1073 | 0.00% | Parallel Cheapest Insertion + Guided Local Search |
-| A-n65-k9 | 1174 | 1184 | 0.85% | Parallel Cheapest Insertion / Global Cheapest Arc + Guided Local Search |
+| A-n48-k7 | 1073 | 1073 | 0.00% | `Path Cheapest Arc` or `Savings` + `Guided Local Search` |
+| A-n65-k9 | 1174 | 1184 | 0.85% | `Parallel Cheapest Insertion` or `Parallel Cheapest Insertion` + `Guided Local Search` |
 | B-n41-k6 | 829 | 829 | 0.00% | TBD |
 | B-n68-k9 | 1272 | 1289 | ~1.34% | TBD |
 | X-n110-k13 | 14971 | 15150 | ~1.20% | TBD |
