@@ -77,13 +77,14 @@ Each instances are evaluated in two stages: first-solution construction heuristi
 | `Savings` | **1073** | 1097 | 1097 | 
 | `Local Cheapest Insertion` | 1084 | 1127 | 1192 |
 
-
+After the local-search metaheuristics is set to `Guided Local Search`, first-solution construction heuristics are also evaluated across all instances.
+     
 | Instances | A-n48-k7 | A-n65-k9 | B-n41-k6 | B-n68-k9 | X-n110-k13 | X-n129-k18 |
 |---|---:|---:|---:|---:|---:|---|
-| `Parallel Cheapest Insertion` | 1088 | 1184 | 843 | 1290 | 15449 | 30161 | 
-| `Path Cheapest Arc` | **1073** | 1218 | 829 | 1289 | 15260 | 30506 | 
+| `Parallel Cheapest Insertion` | 1088 | **1184** | 843 | 1290 | 15449 | **30161** | 
+| `Path Cheapest Arc` | **1073** | 1218 | **829** | **1289** | 15260 | 30506 | 
 | `Savings` | **1073** | 1195 | 840 | 1307 | 15554 | 30889 | 
-| `Local Cheapest Insertion` | 1084 | 1184 | 829 | 1311 | 15150 | 30970 | 
+| `Local Cheapest Insertion` | 1084 | **1184** | **829** | 1311 | **15150** | 30970 | 
 
 
 
