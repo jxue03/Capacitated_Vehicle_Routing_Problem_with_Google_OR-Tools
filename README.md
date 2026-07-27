@@ -99,35 +99,27 @@ Three local-search metaheuristics are then evaluated for improving the construct
 - `SIMULATED_ANNEALING`: Probabilistically accepts some worsening moves, particularly earlier in the search, to escape local optima and explore alternative solutions.
            
 Preliminary experimentation indicated that these strategies performed competitively across the selected CVRPLIB instances. Other strategies were explored during initial testing but were excluded from the final benchmark to keep the analysis manageable, as they offered limited additional methodological diversity, were less consistently competitive, or were less relevant to the scope of the study.
-       
-## Results
-
-
-### Experimental Strategy
-
-The initial evaluation considered all combinations of the four selected first-solution construction heuristics and three local-search metaheuristics:
-
-
-
-`Guided Local Search` demonstrated the most consistent performance across the tested instances, suggesting greater robustness than `Tabu Search` and `Simulated Annealing` under the experimental settings. As a representative example, the table below presents the local-search comparison for A-n48-k7. Similar comparisons were conducted across all benchmark instances, with Guided Local Search consistently producing the strongest results.
-
-
-`Guided Local Search` demonstrated the most consistent performance across the tested instances, outperforming `Tabu Search` and `Simulated Annealing` under the experimental settings. The results for A-n48-k7 are shown below as a representative example. 
+                                
+## Experimental Strategy
+                
+The initial evaluation considered all combinations of the four selected first-solution construction heuristics and three local-search metaheuristics:                    
+4 construction heuristics × 3 local-search metaheuristics = 12 configurations
+                          
+Across the initial comparisons, `Guided Local Search` demonstrated the most consistent performance across the tested instances, suggesting greater robustness than `Tabu Search` and `Simulated Annealing` under the experimental settings. As a representative example, the table below presents the local-search comparison for A-n48-k7. Similar comparisons were conducted across all benchmark instances, with `Guided Local Search` consistently producing the strongest results.
                                 
 | A-n48-k7 | `Guided Local Search` | `Tabu Local Search` | `Simulated Annealing` |
 |---|---:|---:|---|
-| `Parallel Cheapest Insertion` | 1088 | 1116 | 1152 | 
+| `Parallel Cheapest Insertion` | **1088** | 1116 | 1152 | 
 | `Path Cheapest Arc` | **1073** | 1102 | 1221 |
 | `Savings` | **1073** | 1097 | 1097 | 
-| `Local Cheapest Insertion` | 1084 | 1127 | 1192 |
+| `Local Cheapest Insertion` | **1084** | 1127 | 1192 |
+                           
+For this instance, `Guided Local Search` produced lower final route distances under all four first-solution strategies, indicating that its advantage was not dependent on a single initialization method. Similar comparisons across the remaining benchmark instances showed the same overall pattern. Based on this consistency, `Guided Local Search` was selected as the local-search metaheuristic for the subsequent comparison:                       
+4 construction heuristics × 1 local-search metaheuristic (GLS) = 4 configurations per instance
+                        
+This allowed the four construction heuristics to be evaluated across a broader range of CVRPLIB instances without testing less competitive metaheuristic configurations.
 
-For this instance, GLS produced lower final route distances for all four first-solution strategies, indicating that its advantage was not dependent on a single initialization method. Similar comparisons across the remaining benchmark instances showed the same overall pattern. Based on this consistency, GLS was selected as the local-search metaheuristic for the subsequent first-solution strategy comparison.
-
-
-
-
-After the local-search metaheuristics is set to `Guided Local Search`, first-solution construction heuristics are also evaluated across all instances.       
-The best solutions are highlighted in bold. 
+With the local-search metaheuristic fixed to `Guided Local Search`, the four selected first-solution construction heuristics were evaluated across all benchmark instances. In contrast to the consistent performance of GLS in the metaheuristic comparison, no single construction heuristic consistently outperformed the others. The best solution(s) for each instance are highlighted in bold.
      
 | Instances | A-n48-k7 | A-n65-k9 | B-n41-k6 | B-n68-k9 | X-n110-k13 | X-n129-k18 |
 |---|---:|---:|---:|---:|---:|---|
@@ -135,6 +127,10 @@ The best solutions are highlighted in bold.
 | `Path Cheapest Arc` | **1073** | 1218 | **829** | **1289** | 15260 | 30506 | 
 | `Savings` | **1073** | 1195 | 840 | 1307 | 15554 | 30889 | 
 | `Local Cheapest Insertion` | 1084 | **1184** | **829** | 1311 | **15150** | 30970 | 
+
+The experiments suggest that the effectiveness of the first-solution strategy is instance-dependent.
+
+## Final Results
 
 Then the best found solution are evaluated relative to the published best-known solution (BKS) for each CVRPLIB instance.
                         
