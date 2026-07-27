@@ -53,16 +53,9 @@ Travel distances from CVRPLIB are rounded using the TSPLIB metric rounding conve
 ## Search Algorithms
 
 Each CVRP instance is evaluated in two stages: a first-solution construction heuristic generates an initial feasible solution, followed by a local-search metaheuristic that improves the solution.
-
-
-
-
-Together, these strategies provide a diverse comparison of greedy path construction, parallel and sequential insertion, and savings-based route construction. Preliminary experimentation also indicated that these four strategies were competitive across the selected CVRPLIB instances, while additional OR-Tools strategies either provided limited additional insight or were less directly relevant to the scope of the study.
-
-
-
-Although Google OR-Tools provides a broad range of first-solution strategies, this study focuses on four representative and competitive construction heuristics. These strategies were selected to capture distinct route-construction approaches while keeping the experimental comparison manageable:
-
+                   
+Although Google OR-Tools provides a broad range of first-solution strategies, this study focuses on four representative and competitive construction heuristics selected to capture distinct route-construction approaches: greedy path construction, parallel and sequential insertion, and savings-based route construction:
+      
 - `PATH_CHEAPEST_ARC`: Start from a route "start" node, constructs routes sequentially by repeatedly extending the current route through the cheapest feasible arc. It represents a greedy, path-based construction approach.
      
 - `PARALLEL_CHEAPEST_INSERTION`: Builds multiple routes simultaneously by repeatedly selecting low-cost feasible customer insertions across the developing routes. It represents a parallel insertion-based approach.
@@ -71,29 +64,16 @@ Although Google OR-Tools provides a broad range of first-solution strategies, th
          
 - `SAVINGS`: A savings-based construction approach inspired by the Clarke-Wright Savings algorithm. Routes are formed by prioritizing combinations that reduce travel cost relative to serving customers separately from the depot.
    
-and three local-search metaheuristics:  
-- `GUIDED_LOCAL_SEARCH`: Uses guided local search to escape local minima, which accecpts worse moves through penalities
-- `TABU_SEARCH`: Uses tabu search to escape local minima, which uses memory to temporarily forbid recently used moves.
-- `SIMULATED_ANNEALING`: TBD
-
-
 Three local-search metaheuristics are then evaluated for improving the constructed solutions:
-
-- `GUIDED_LOCAL_SEARCH` (GLS): Escapes local optima by dynamically penalizing costly solution features, encouraging the search to explore alternative regions of the solution space.
-
+          
+- `GUIDED_LOCAL_SEARCH`: Escapes local optima by dynamically penalizing costly solution features, encouraging the search to explore alternative regions of the solution space.
+            
 - `TABU_SEARCH`: Uses short-term search memory to temporarily restrict recently used moves, reducing cycling and encouraging exploration beyond the current local optimum.
-
-- `SIMULATED_ANNEALING` (SA): Probabilistically accepts some worsening moves, particularly earlier in the search, to escape local optima and explore alternative solutions.
-
-
-
-
-
-
-
-
-`PATH_CHEAPEST_ARC` represents greedy path-based construction, `PARALLEL_CHEAPEST_INSERTION` and `LOCAL_CHEAPEST_INSERTION` represent two distinct insertion-based approaches, and `SAVINGS` represents a classical savings-based route-merging approach. Preliminary experimentation indicated that these strategies were competitive across the selected CVRPLIB instances, while additional strategies provided limited additional insight or were less directly suited to the scope of the study.
-
+                   
+- `SIMULATED_ANNEALING`: Probabilistically accepts some worsening moves, particularly earlier in the search, to escape local optima and explore alternative solutions.
+           
+Preliminary experimentation indicated that these strategies performed competitively across the selected CVRPLIB instances, while limiting the comparison to four methods kept the analysis manageable and avoided strategies that provided limited additional insight or were less relevant to the scope of the study.
+       
 ## Results
 
 Each instances are evaluated in two stages: first-solution construction heuristics and local-search metaheuristics.
