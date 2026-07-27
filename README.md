@@ -105,6 +105,7 @@ Preliminary experimentation indicated that these strategies performed competitiv
 #### Metaheuristic Comparison:
                 
 The initial evaluation considered all combinations of the four selected first-solution construction heuristics and three local-search metaheuristics:                    
+                
 4 construction heuristics × 3 local-search metaheuristics = 12 configurations
                           
 Across the initial comparisons, `Guided Local Search` demonstrated the most consistent performance across the tested instances, suggesting greater robustness than `Tabu Search` and `Simulated Annealing` under the experimental settings. As a representative example, the table below presents the local-search comparison for A-n48-k7. Similar comparisons were conducted across all benchmark instances, with `Guided Local Search` consistently producing the strongest results.
@@ -116,7 +117,8 @@ Across the initial comparisons, `Guided Local Search` demonstrated the most cons
 | `Savings` | **1073** | 1097 | 1097 | 
 | `Local Cheapest Insertion` | **1084** | 1127 | 1192 |
                            
-For this instance, `Guided Local Search` produced lower final route distances under all four first-solution strategies, indicating that its advantage was not dependent on a single initialization method. Similar comparisons across the remaining benchmark instances showed the same overall pattern. Based on this consistency, `Guided Local Search` was selected as the local-search metaheuristic for the subsequent comparison:                       
+For this instance, `Guided Local Search` produced lower final route distances under all four first-solution strategies, indicating that its advantage was not dependent on a single initialization method. Similar comparisons across the remaining benchmark instances showed the same overall pattern. Based on this consistency, `Guided Local Search` was selected as the local-search metaheuristic for the subsequent comparison:
+                
 4 construction heuristics × 1 local-search metaheuristic (GLS) = 4 configurations per instance
                         
 This allowed the four construction heuristics to be evaluated across a broader range of CVRPLIB instances without testing less competitive metaheuristic configurations.
@@ -143,7 +145,7 @@ The best solution obtained for each instance was evaluated relative to its publi
 | A-n48-k7 | 1073 | 1073 | 0.00% | `Path Cheapest Arc` or `Savings` + `Guided Local Search` |
 | A-n65-k9 | 1174 | 1184 | 0.85% | `Parallel Cheapest Insertion` or `Local Cheapest Insertion` + `Guided Local Search` |
 | B-n41-k6 | 829 | 829 | 0.00% | `Path Cheapest Arc` or `Local Cheapest Insertion` + `Guided Local Search` |
-| B-n68-k9 | 1272 | 1289 | ~1.34% | `Parallel Cheapest Insertion` or `Path Cheapest Arc` + `Guided Local Search`|
+| B-n68-k9 | 1272 | 1289 | ~1.34% | `Path Cheapest Arc` + `Guided Local Search`|
 | X-n110-k13 | 14971 | 15150 | ~1.20% | `Local Cheapest Insertion` + `Guided Local Search` |
 | X-n129-k18 | 28940 | 30161 | ~4.22% | `Parallel Cheapest Insertion` + `Guided Local Search` |
 
