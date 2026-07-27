@@ -4,17 +4,6 @@ This project implements and evaluates the **Capacitated Vehicle Routing Problem 
 
 The goal of the project is to explore how different OR-Tools routing strategies affect solution quality across CVRP instances of varying sizes and structures.
 
-## Problem Description
-
-The Capacitated Vehicle Routing Problem determines a set of vehicle routes that serve all customers while minimizing total travel distance.
-
-The model requires that:
-
-- Each customer is visited exactly once.
-- Each route starts and ends at the depot.
-- The total demand assigned to a vehicle does not exceed its capacity.
-- Total travel distance across all vehicle routes is minimized.
-
 ## Dataset
 
 Benchmark instances are obtained from **CVRPLIB**.
@@ -33,7 +22,19 @@ Six instances from the A, B, and X sets are evaluated:
 A sets are...
 B sets are...
 X sets are...
+               
+## Problem Description
 
+The Capacitated Vehicle Routing Problem determines a set of vehicle routes that serve all customers while minimizing total travel distance.
+
+The model requires that:
+
+- Each customer is visited exactly once.
+- Each route starts and ends at the depot.
+- The total demand assigned to a vehicle does not exceed its capacity.
+- Total travel distance across all vehicle routes is minimized.
+
+           
 ## Mathematical Formulation
 
 Let:
@@ -113,26 +114,9 @@ $$
 \qquad \forall k \in K
 $$
 
-Vehicles are not required to be used if a feasible solution can be obtained with fewer than the available number of vehicles.
-
-> **Note:** This formulation summarizes the primary CVRP objective and constraints represented by the OR-Tools routing model. Route continuity and connectivity are handled internally by `RoutingModel` rather than through an explicitly implemented arc-based MIP formulation.
-
-### Benchmark Solution Gap
-
-The quality of the best OR-Tools solution is evaluated relative to the published best-known solution (BKS):
-
-$$
-\text{BKS Gap}(\%) =
-\frac{z_{\text{OR-Tools}} - z_{\text{BKS}}}
-{z_{\text{BKS}}}
-\times 100
-$$
-
-where $z_{\text{OR-Tools}}$ is the best route distance obtained by OR-Tools and $z_{\text{BKS}}$ is the published best-known solution.
-
+**Note:** This formulation summarizes the primary CVRP objective and constraints represented by the OR-Tools routing model. Route continuity and connectivity are handled internally by `RoutingModel` rather than through an explicitly implemented arc-based MIP formulation.
+                      
 ## Implementation and Framework
-
-The CVRP is implemented using the OR-Tools Routing Solver.
 
 The implementation includes:
 
@@ -143,8 +127,6 @@ The implementation includes:
 - A capacity dimension for enforcing vehicle capacity constraints
 - Configurable first-solution and local-search strategies
 - Solution validation for total demand and route feasibility
-
-Travel distances from CVRPLIB are rounded using the TSPLIB metric rounding convention.
 
 ```text
 CVRP_solved_by_ORtools.py
