@@ -62,8 +62,8 @@ The objective is to minimize the total distance traveled across all vehicle rout
 $$
 \min \sum_{k \in K}
 \sum_{i \in V}
-\sum_{\substack{j \in V \\ j \neq i}}
-c_{ij}x_{ijk}
+\sum_{\substack{j \in V \\ (j \neq i)}}
+c_{ij}x_{ij}
 $$
 
 ### Customer Coverage
