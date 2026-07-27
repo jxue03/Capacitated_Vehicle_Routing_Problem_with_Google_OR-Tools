@@ -19,9 +19,10 @@ Six instances from the A, B, and X sets are evaluated:
 | X-n110-k13 | 109 | 13 | 66 | 858 | 816 | 42 |
 | X-n129-k18 | 128 | 18 | 39 | 702 | 665 | 37 |
 
-A sets are...
-B sets are...
-X sets are...
+- **Set A — Augerat instances:** Customer demands and locations are generated randomly.
+- **Set B — Augerat instances:** The layout consists of specific "clusters" of nodes. This arrangement tests an algorithm's ability to navigate tight local groupings while managing overall vehicle payloads and route limits.
+- **Set X — Uchoa et al. instances:** a much newer and substantially broader benchmark set, ranging from roughly 100 to 1,000 customers. Unlike A and B, X was deliberately designed to provide high diversity in instance characteristics, including different customer-location patterns, demand distributions, depot locations, and route lengths. These instances are more challenging and representative of modern CVRP benchmark.
+
                
 ## Problem Description
 
