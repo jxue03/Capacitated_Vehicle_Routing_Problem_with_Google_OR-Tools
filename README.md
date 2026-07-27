@@ -34,7 +34,7 @@ A sets are...
 B sets are...
 X sets are...
 
-## OR-Tools Implementation
+## OR-Tools Implementation and Project Structure
 
 The CVRP is implemented using the OR-Tools Routing Solver.
 
@@ -50,6 +50,32 @@ The implementation includes:
 
 Travel distances from CVRPLIB are rounded using the TSPLIB metric rounding convention.
 
+```text
+CVRP_solved_by_ORtools.py
+│
+├── Load CVRPLIB instance
+│
+├── Create data model
+│
+├── Build routing model
+│   ├── RoutingIndexManager
+│   ├── Distance callback
+│   └── Demand / capacity constraints
+│
+├── Configure search
+│   ├── First-solution strategy
+│   ├── Local-search metaheuristic
+│   └── Time limit
+│
+├── Solve
+│
+└── Process results
+    ├── Print solution
+    ├── Plot routes
+    └── Calculate BKS gap
+```
+
+                          
 ## Search Algorithms
 
 Each CVRP instance is evaluated in two stages: a first-solution construction heuristic generates an initial feasible solution, followed by a local-search metaheuristic that improves the solution.
@@ -122,40 +148,3 @@ Different construction heuristics sometimes led to different final solutions eve
 
 **Different initial solutions can converge to the same final solution.**  
 The identical 1184 result from multiple construction strategies on `A-n65-k9` suggests that Guided Local Search can move different initial solutions toward the same high-quality local optimum.
-
-## Project Structure
-
-```text
-cvrp-ortools/
-│
-├── import packages and solver
-│
-├── read instance/
-│   ├── A-n48-k7.vrp
-│   ├── A-n65-k9.vrp
-│   ├── B-n41-k6.vrp
-│   ├── B-n68-k9.vrp
-│   ├── X-n110-k13.vrp
-│   └── X-n129-k18.vrp
-│
-├── create_data_model
-│
-├── print instance summary
-│
-├── build_routing_model/
-│   ├── create RoutingIndexManager
-│   ├── distance_callback
-│   └── demand_callback
-│
-├── create_search_parameters/
-│   ├── first_solution_strategy 
-│   └── local_search_metaheuristic
-│
-├── set time limit
-├── print routing status
-│
-└── results/
-    ├── print solution
-    ├── plot the routes
-    └── print optimality gap
-```
