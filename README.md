@@ -64,12 +64,12 @@ and three local-search metaheuristics:
 - `TABU_SEARCH`: Uses tabu search to escape local minima, which uses memory to temporarily forbid recently used moves.
 - `SIMULATED_ANNEALING`: TBD
 
+## Results
 
-
-The underlying CVRP formulation and computational settings were kept fixed while search strategies were varied.
-
-`Guided Local Search` consistantly outperform `Tabu Local Search` and `Simulated Annealing` for all instances evaluated.     
-The table below shows the solution comparison for instance A-n48-k7:      
+Each instances are evaluated in two stages: first-solution construction heuristics and local-search metaheuristics.
+    
+`Guided Local Search` demonstrated the most consistent performance across the tested instances, suggesting greater robustness than `Tabu Search` and `Simulated Annealing` under the experimental settings. As a representative example, the table below presents the local-search comparison for A-n48-k7. Similar comparisons were conducted across all benchmark instances, with Guided Local Search consistently producing the strongest results.
+   
 | A-n48-k7 | `Guided Local Search` | `Tabu Local Search` | `Simulated Annealing` |
 |---|---:|---:|---|
 | `Parallel Cheapest Insertion` | 1088 | 1116 | 1152 | 
@@ -77,11 +77,19 @@ The table below shows the solution comparison for instance A-n48-k7:
 | `Savings` | **1073** | 1097 | 1097 | 
 | `Local Cheapest Insertion` | 1084 | 1127 | 1192 |
 
-## Results
+
+| Instances | A-n48-k7 | A-n65-k9 | B-n41-k6 | B-n68-k9 | X-n110-k13 | X-n129-k18 |
+|---|---:|---:|---:|---:|---:|---|
+| `Parallel Cheapest Insertion` | 1088 | 1116 | 1152 | 1152 | 1152 | 1152 | 
+| `Path Cheapest Arc` | **1073** | 1102 | 1221 |1152 | 1152 | 1152 | 
+| `Savings` | **1073** | 1097 | 1097 | 1152 | 1152 | 1152 | 
+| `Local Cheapest Insertion` | 1084 | 1127 | 1192 |1152 | 1152 | 1152 | 
+
+
+
 
 Solution quality is evaluated relative to the published best-known solution (BKS) for each CVRPLIB instance.
- 
-       
+          
 | Instance | Best Known Solution (BKS) | Best OR-Tools Solution | Optimality Gap | Best Configuration |
 |---|---:|---:|---:|---|
 | A-n48-k7 | 1073 | 1073 | 0.00% | `Path Cheapest Arc` or `Savings` + `Guided Local Search` |
