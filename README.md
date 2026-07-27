@@ -161,30 +161,40 @@ The results show that the tested OR-Tools search configurations were capable of 
 <table>
   <tr>
     <td align="center">
-      <img src="RoutingPlots/A-n48-k7_PATH_CHEAPEST_ARC_and_GUIDED_LOCAL_SEARCH.png" width="300"><br>
-      <b>A-n48-k7</b>
+      <img src="RoutingPlots/A-n48-k7_PATH_CHEAPEST_ARC_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
+      <b>A-n48-k7</b><br>
+      <sub>PATH_CHEAPEST_ARC + GLS</sub>
     </td>
     <td align="center">
-      <img src="RoutingPlots/A-n65-k9_PARALLEL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="300"><br>
-      <b>A-n65-k9</b>
-    </td>
-    <td align="center">
-      <img src="RoutingPlots/B-n41-k6_LOCAL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="300"><br>
-      <b>B-n41-k6</b>
+      <img src="RoutingPlots/A-n65-k9_PARALLEL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
+      <b>A-n65-k9</b><br>
+      <sub>PARALLEL_CHEAPEST_INSERTION + GLS</sub>
     </td>
   </tr>
+
   <tr>
     <td align="center">
-      <img src="RoutingPlots/B-n68-k9_PATH_CHEAPEST_ARC_and_GUIDED_LOCAL_SEARCH.png" width="300"><br>
-      <b>B-n68-k9</b>
+      <img src="RoutingPlots/B-n41-k6_LOCAL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
+      <b>B-n41-k6</b><br>
+      <sub>LOCAL_CHEAPEST_INSERTION + GLS</sub>
     </td>
     <td align="center">
-      <img src="RoutingPlots/X-n110-k13_LOCAL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="300"><br>
-      <b>X-n110-k13</b>
+      <img src="RoutingPlots/B-n68-k9_PATH_CHEAPEST_ARC_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
+      <b>B-n68-k9</b><br>
+      <sub>PATH_CHEAPEST_ARC + GLS</sub>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <img src="RoutingPlots/X-n110-k13_LOCAL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
+      <b>X-n110-k13</b><br>
+      <sub>LOCAL_CHEAPEST_INSERTION + GLS</sub>
     </td>
     <td align="center">
-      <img src="RoutingPlots/X-n129-k18_PARALLEL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="300"><br>
-      <b>X-n129-k18</b>
+      <img src="RoutingPlots/X-n129-k18_PARALLEL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
+      <b>X-n129-k18</b><br>
+      <sub>PARALLEL_CHEAPEST_INSERTION + GLS</sub>
     </td>
   </tr>
 </table>
