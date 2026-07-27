@@ -68,14 +68,14 @@ Distance of the route: 115
 Load of the route: 97   
    
 **Route for vehicle 4:**   
-0 Load(0) -> 33 Load(12) -> 13 Load(21) -> 12 Load(32) -> 1 Load(44) -> 23 Load(66) -> 28 Load(82) -> 62 Load(98) -> 0 Load(98)   
-Distance of the route: 126
-Load of the route: 98
+0 Load(0) -> 33 Load(12) -> 13 Load(21) -> 12 Load(32) -> 1 Load(44) -> 23 Load(66) -> 28 Load(82) -> 62 Load(98) -> 0 Load(98)           
+Distance of the route: 126        
+Load of the route: 98     
 
 **Route for vehicle 5:**
-0 Load(0) -> 29 Load(14) -> 25 Load(31) -> 44 Load(56) -> 56 Load(80) -> 59 Load(94) -> 0 Load(94)
-Distance of the route: 130   
-Load of the route: 94   
+0 Load(0) -> 29 Load(14) -> 25 Load(31) -> 44 Load(56) -> 56 Load(80) -> 59 Load(94) -> 0 Load(94)       
+Distance of the route: 130         
+Load of the route: 94            
    
 **Route for vehicle 6:**   
 0 Load(0) -> 18 Load(7) -> 19 Load(8) -> 24 Load(29) -> 52 Load(35) -> 10 Load(52) -> 8 Load(70) -> 21 Load(80) -> 55 Load(100) -> 0 Load(100)   
