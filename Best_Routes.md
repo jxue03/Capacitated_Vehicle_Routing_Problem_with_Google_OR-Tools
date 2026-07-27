@@ -9,39 +9,40 @@ This file contains the detailed vehicle routes for the best solution obtained fo
 **BKS:** 1073  
 **Gap:** 0.00%
 
-### Vehicle Routes
+#### Vehicle Routes
 
-**Vehicle 0**  
-Route: `0 → 23 → 43 → 31 → 1 → 5 → 12 → 0`  
-Distance: 109  
-Load: 91
+**Route for vehicle 0:**
+0 Load(0) -> 23 Load(12) -> 43 Load(25) -> 31 Load(27) -> 1 Load(47) -> 5 Load(69) -> 12 Load(91) -> 0 Load(91)
+Distance of the route: 109
+Load of the route: 91
 
-**Vehicle 1**  
-Route: `0 → 41 → 2 → 10 → 47 → 17 → 14 → 0`  
-Distance: 139  
-Load: 96
+Route for vehicle 1:
+0 Load(0) -> 41 Load(14) -> 2 Load(28) -> 10 Load(54) -> 47 Load(70) -> 17 Load(85) -> 14 Load(96) -> 0 Load(96)
+Distance of the route: 139
+Load of the route: 96
 
-**Vehicle 2**  
-Route: `0 → 45 → 27 → 15 → 42 → 11 → 4 → 24 → 9 → 34 → 0`  
-Distance: 205  
-Load: 99
+Route for vehicle 2:
+0 Load(0) -> 45 Load(16) -> 27 Load(31) -> 15 Load(49) -> 42 Load(53) -> 11 Load(67) -> 4 Load(78) -> 24 Load(86) -> 9 Load(96) -> 34 Load(99) -> 0 Load(99)
+Distance of the route: 205
+Load of the route: 99
 
-**Vehicle 3**  
-Route: `0 → 16 → 33 → 46 → 13 → 30 → 21 → 29 → 28 → 0`  
-Distance: 202  
-Load: 100
+Route for vehicle 3:
+0 Load(0) -> 16 Load(24) -> 33 Load(44) -> 46 Load(62) -> 13 Load(71) -> 30 Load(81) -> 21 Load(89) -> 29 Load(91) -> 28 Load(100) -> 0 Load(100)
+Distance of the route: 202
+Load of the route: 100
 
-**Vehicle 4**  
-Route: `0 → 32 → 36 → 38 → 19 → 25 → 22 → 6 → 0`  
-Distance: 173  
-Load: 98
+Route for vehicle 4:
+0 Load(0) -> 32 Load(3) -> 36 Load(28) -> 38 Load(36) -> 19 Load(52) -> 25 Load(68) -> 22 Load(73) -> 6 Load(98) -> 0 Load(98)
+Distance of the route: 173
+Load of the route: 98
 
-**Vehicle 5**  
-Route: `0 → 18 → 35 → 44 → 0`  
-Distance: 39  
-Load: 43
+Route for vehicle 5:
+0 Load(0) -> 18 Load(23) -> 35 Load(36) -> 44 Load(43) -> 0 Load(43)
+Distance of the route: 39
+Load of the route: 43
 
-**Vehicle 6**  
-Route: `0 → 37 → 3 → 20 → 26 → 39 → 8 → 7 → 40 → 0`  
-Distance: 206  
-Load: 99
+Route for vehicle 6:
+0 Load(0) -> 37 Load(23) -> 3 Load(28) -> 20 Load(42) -> 26 Load(54) -> 39 Load(70) -> 8 Load(88) -> 7 Load(90) -> 40 Load(99) -> 0 Load(99)
+Distance of the route: 206
+Load of the route: 99
+
