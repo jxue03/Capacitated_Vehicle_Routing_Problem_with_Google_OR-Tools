@@ -103,37 +103,25 @@ The identical 1184 result from multiple construction strategies on `A-n65-k9` su
 ```text
 cvrp-ortools/
 │
-├── README.md
-├── requirements.txt
-│
-├── data/
-│   ├── A-n33-k6.vrp
+├── import
+├── read instance/
 │   ├── A-n48-k7.vrp
 │   ├── A-n65-k9.vrp
 │   ├── B-n41-k6.vrp
-│   └── B-n68-k9.vrp
-│
-├── src/
-│   ├── cvrp_solver.py
-│   └── experiments.py
+│   ├── B-n68-k9.vrp
+│   ├── X-n110-k13.vrp
+│   └── X-n129-k18.vrp
+├── create data model
+├── build_routing_model/
+│   ├── distance callback
+│   └── demand callback
+├── create search parameters/
+│   ├── first_solution_strategy 
+│   └── local_search_metaheuristic
+├── print routing status
 │
 └── results/
-    └── benchmark_results.csv
+    ├── print solution
+    ├── plot the routes
+    └── print optimality gap
 ```
-
-## Technologies
-
-- Python
-- Google OR-Tools
-- NumPy
-- vrplib
-- CVRPLIB benchmark instances
-
-## Future Work
-
-Possible extensions include:
-
-- Testing larger CVRPLIB instances
-- Evaluating the effect of different computational time limits
-- Visualizing vehicle routes
-- Investigating more advanced routing variants such as VRPTW
