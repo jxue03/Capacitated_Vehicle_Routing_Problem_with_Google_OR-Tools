@@ -34,6 +34,107 @@ A sets are...
 B sets are...
 X sets are...
 
+## Mathematical Formulation
+
+Let:
+
+- $V = \{0,1,\ldots,n\}$ be the set of nodes, where node $0$ represents the depot.
+- $C = V \setminus \{0\}$ be the set of customers.
+- $K = \{1,\ldots,m\}$ be the set of vehicles.
+- $c_{ij}$ be the travel distance from node $i$ to node $j$.
+- $q_i$ be the demand of customer $i$.
+- $Q$ be the capacity of each vehicle.
+
+Define the binary decision variable:
+
+$$
+x_{ijk} =
+\begin{cases}
+1, & \text{if vehicle } k \text{ travels directly from node } i \text{ to node } j,\\
+0, & \text{otherwise.}
+\end{cases}
+$$
+
+### Objective Function
+
+The objective is to minimize the total distance traveled across all vehicle routes:
+
+$$
+\min \sum_{k \in K}
+\sum_{i \in V}
+\sum_{\substack{j \in V \\ j \neq i}}
+c_{ij}x_{ijk}
+$$
+
+### Customer Coverage
+
+Each customer must be visited exactly once by one vehicle:
+
+$$
+\sum_{k \in K}
+\sum_{\substack{j \in V \\ j \neq i}}
+x_{ijk} = 1
+\qquad \forall i \in C
+$$
+
+### Vehicle Capacity
+
+The total demand assigned to each vehicle cannot exceed its capacity:
+
+$$
+\sum_{i \in C}
+q_i
+\sum_{\substack{j \in V \\ j \neq i}}
+x_{ijk}
+\leq Q
+\qquad \forall k \in K
+$$
+
+### Flow Conservation
+
+For each vehicle, entering a customer node requires leaving that node:
+
+$$
+\sum_{\substack{j \in V \\ j \neq i}}
+x_{ijk}
+=
+\sum_{\substack{j \in V \\ j \neq i}}
+x_{jik}
+\qquad
+\forall i \in C,\; k \in K
+$$
+
+### Depot Constraints
+
+Each used vehicle departs from and returns to the depot at most once:
+
+$$
+\sum_{j \in C} x_{0jk} \leq 1
+\qquad \forall k \in K
+$$
+
+$$
+\sum_{i \in C} x_{i0k} \leq 1
+\qquad \forall k \in K
+$$
+
+Vehicles are not required to be used if a feasible solution can be obtained with fewer than the available number of vehicles.
+
+> **Note:** This formulation summarizes the primary CVRP objective and constraints represented by the OR-Tools routing model. Route continuity and connectivity are handled internally by `RoutingModel` rather than through an explicitly implemented arc-based MIP formulation.
+
+### Benchmark Solution Gap
+
+The quality of the best OR-Tools solution is evaluated relative to the published best-known solution (BKS):
+
+$$
+\text{BKS Gap}(\%) =
+\frac{z_{\text{OR-Tools}} - z_{\text{BKS}}}
+{z_{\text{BKS}}}
+\times 100
+$$
+
+where $z_{\text{OR-Tools}}$ is the best route distance obtained by OR-Tools and $z_{\text{BKS}}$ is the published best-known solution.
+
 ## Implementation and Framework
 
 The CVRP is implemented using the OR-Tools Routing Solver.
