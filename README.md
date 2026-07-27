@@ -100,7 +100,9 @@ Three local-search metaheuristics are then evaluated for improving the construct
            
 Preliminary experimentation indicated that these strategies performed competitively across the selected CVRPLIB instances. Other strategies were explored during initial testing but were excluded from the final benchmark to keep the analysis manageable, as they offered limited additional methodological diversity, were less consistently competitive, or were less relevant to the scope of the study.
                                 
-## Experimental Strategy
+## Final Results
+
+#### Metaheuristic Comparison
                 
 The initial evaluation considered all combinations of the four selected first-solution construction heuristics and three local-search metaheuristics:                    
 4 construction heuristics × 3 local-search metaheuristics = 12 configurations
@@ -119,6 +121,9 @@ For this instance, `Guided Local Search` produced lower final route distances un
                         
 This allowed the four construction heuristics to be evaluated across a broader range of CVRPLIB instances without testing less competitive metaheuristic configurations.
 
+               
+#### First-Solution Construction Heuristics Comparison
+              
 With the local-search metaheuristic fixed to `Guided Local Search`, the four selected first-solution construction heuristics were evaluated across all benchmark instances. In contrast to the consistent performance of GLS in the metaheuristic comparison, no single construction heuristic consistently outperformed the others. The best solution(s) for each instance are highlighted in bold.
      
 | Instances | A-n48-k7 | A-n65-k9 | B-n41-k6 | B-n68-k9 | X-n110-k13 | X-n129-k18 |
@@ -130,7 +135,7 @@ With the local-search metaheuristic fixed to `Guided Local Search`, the four sel
 
 The experiments suggest that the effectiveness of the first-solution strategy is instance-dependent.
 
-## Final Results
+#### Final Results
 
 Then the best found solution are evaluated relative to the published best-known solution (BKS) for each CVRPLIB instance.
                         
