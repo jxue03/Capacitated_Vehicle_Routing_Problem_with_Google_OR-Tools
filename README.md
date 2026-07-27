@@ -105,29 +105,7 @@ Preliminary experimentation indicated that these strategies performed competitiv
 
 ### Experimental Strategy
 
-Initial testing evaluated all combinations of the four selected construction heuristics and three local-search metaheuristics:
-
-$$
-4\text{ construction heuristics}
-\times
-3\text{ metaheuristics}
-=
-12\text{ configurations}
-$$
-
-`Guided Local Search` consistently produced the strongest results across these initial comparisons. Therefore, GLS was retained for the remaining benchmark experiments:
-
-$$
-4\text{ construction heuristics}
-\times
-1\text{ metaheuristic (GLS)}
-=
-4\text{ configurations per instance}
-$$
-
-This reduced redundant experimentation while allowing the four construction heuristics to be evaluated across a broader set of CVRPLIB instances.
-
-
+The initial evaluation considered all combinations of the four selected first-solution construction heuristics and three local-search metaheuristics:
 
 
 
