@@ -104,13 +104,11 @@ $$
 Each used vehicle departs from and returns to the depot at most once:
 
 $$
-\sum_{j \in C} x_{0jk} \leq 1
-\qquad \forall k \in K
+\sum_{j \in C} x_{0j} \leq 1
 $$
 
 $$
-\sum_{i \in C} x_{i0k} \leq 1
-\qquad \forall k \in K
+\sum_{i \in C} x_{i0} \leq 1
 $$
 
 **Note:** This formulation summarizes the primary CVRP objective and constraints represented by the OR-Tools routing model. Route continuity and connectivity are handled internally by `RoutingModel` rather than through an explicitly implemented arc-based MIP formulation.
