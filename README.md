@@ -95,14 +95,9 @@ $$
 For each vehicle, entering a customer node requires leaving that node:
 
 $$
-\sum_{\substack{j \in V \\ j \neq i}}
-x_{ijk}
-=
-\sum_{\substack{j \in V \\ j \neq i}}
-x_{jik}
-\qquad
-\forall i \in C,\; k \in K
+\sum_{\substack{j \in V \\ j \neq i}} x_{ijk} = \sum_{\substack{j \in V \\ j \neq i}} x_{jik} \qquad \forall i \in C,\; k \in K
 $$
+
 
 ### Depot Constraints
 
