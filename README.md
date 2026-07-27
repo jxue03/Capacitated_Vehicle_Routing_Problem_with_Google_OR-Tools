@@ -10,7 +10,7 @@ Benchmark instances are obtained from **CVRPLIB**.
 
 Six instances from the A, B, and X sets are evaluated:
 
-| Instance | # Customers | # Vehicles | Vehicle Capacity | Total Fleet Capacity | Total Demand | Unused Capacity | 
+| Instance | # Customers | # Vehicles | Single Vehicle Capacity | Total Fleet Capacity | Total Demand | Unused Capacity | 
 |---|---:|---:|---:|---:|---:|---|
 | A-n48-k7 | 47 | 7 | 100 | 700 | 626 | 74 |
 | A-n65-k9 | 64 | 9 | 100 | 900 | 877 | 23 |
