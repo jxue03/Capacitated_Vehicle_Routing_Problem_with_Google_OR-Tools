@@ -52,12 +52,12 @@ Travel distances from CVRPLIB are rounded using the TSPLIB metric rounding conve
 
 ## Search Algorithms
 
-The search algorithms are evaluated in two stages: first-solution construction heuristics and local-search metaheuristics.
+Each instances are evaluated in two stages: first-solution construction heuristics and local-search metaheuristics.
 Google OR-Tools provides a broad range of search strategies; however, this study mainly focuses on four relevant first-solution strategies:   
-- `PATH_CHEAPEST_ARC`
-- `PARALLEL_CHEAPEST_INSERTION`
-- `LOCAL_CHEAPEST_INSERTION`
-- `SAVINGS`  
+- `PATH_CHEAPEST_ARC`: Starting froma route "start" node, conect it to the node which produces the cheapest route segment, then extend the route by iterating on the last node added to the route.   
+- `PARALLEL_CHEAPEST_INSERTION`: Iteratively build a solution by inserting the cheapest node at its cheapest position; the cost of insertion is based on the arc cost function.
+- `LOCAL_CHEAPEST_INSERTION`: Iteratively build a solution by inserting each node at its cheapest position; the cost of insertion is based on the arc cost function.
+- `SAVINGS`: Saving algorithm (Clarke & Wright).
 and three local-search metaheuristics:  
 - `GUIDED_LOCAL_SEARCH`
 - `TABU_SEARCH`
