@@ -34,7 +34,7 @@ A sets are...
 B sets are...
 X sets are...
 
-## OR-Tools Implementation and Project Structure
+## Implementation and Framework
 
 The CVRP is implemented using the OR-Tools Routing Solver.
 
@@ -71,7 +71,7 @@ CVRP_solved_by_ORtools.py
 │
 └── Process results
     ├── Print solution
-    ├── Plot routes
+    ├── Route visualization
     └── Calculate BKS gap
 ```
 
@@ -101,15 +101,52 @@ Three local-search metaheuristics are then evaluated for improving the construct
 Preliminary experimentation indicated that these strategies performed competitively across the selected CVRPLIB instances. Other strategies were explored during initial testing but were excluded from the final benchmark to keep the analysis manageable, as they offered limited additional methodological diversity, were less consistently competitive, or were less relevant to the scope of the study.
        
 ## Results
-                  
+
+
+### Experimental Strategy
+
+Initial testing evaluated all combinations of the four selected construction heuristics and three local-search metaheuristics:
+
+$$
+4\text{ construction heuristics}
+\times
+3\text{ metaheuristics}
+=
+12\text{ configurations}
+$$
+
+`Guided Local Search` consistently produced the strongest results across these initial comparisons. Therefore, GLS was retained for the remaining benchmark experiments:
+
+$$
+4\text{ construction heuristics}
+\times
+1\text{ metaheuristic (GLS)}
+=
+4\text{ configurations per instance}
+$$
+
+This reduced redundant experimentation while allowing the four construction heuristics to be evaluated across a broader set of CVRPLIB instances.
+
+
+
+
+
 `Guided Local Search` demonstrated the most consistent performance across the tested instances, suggesting greater robustness than `Tabu Search` and `Simulated Annealing` under the experimental settings. As a representative example, the table below presents the local-search comparison for A-n48-k7. Similar comparisons were conducted across all benchmark instances, with Guided Local Search consistently producing the strongest results.
-   
+
+
+`Guided Local Search` demonstrated the most consistent performance across the tested instances, outperforming `Tabu Search` and `Simulated Annealing` under the experimental settings. The results for A-n48-k7 are shown below as a representative example. 
+                                
 | A-n48-k7 | `Guided Local Search` | `Tabu Local Search` | `Simulated Annealing` |
 |---|---:|---:|---|
 | `Parallel Cheapest Insertion` | 1088 | 1116 | 1152 | 
 | `Path Cheapest Arc` | **1073** | 1102 | 1221 |
 | `Savings` | **1073** | 1097 | 1097 | 
 | `Local Cheapest Insertion` | 1084 | 1127 | 1192 |
+
+For this instance, GLS produced lower final route distances for all four first-solution strategies, indicating that its advantage was not dependent on a single initialization method. Similar comparisons across the remaining benchmark instances showed the same overall pattern. Based on this consistency, GLS was selected as the local-search metaheuristic for the subsequent first-solution strategy comparison.
+
+
+
 
 After the local-search metaheuristics is set to `Guided Local Search`, first-solution construction heuristics are also evaluated across all instances.       
 The best solutions are highlighted in bold. 
