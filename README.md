@@ -116,7 +116,7 @@ $$
               
 **Note:** This formulation summarizes the primary CVRP objective and constraints represented by the OR-Tools routing model. Route continuity and connectivity are handled internally by `RoutingModel` rather than through an explicitly implemented arc-based MIP formulation. 
                
-## Implementation and Framework
+## Implementation and Structure
 
 The implementation includes:
 
