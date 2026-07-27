@@ -60,15 +60,16 @@ Google OR-Tools provides a broad range of search strategies; however, this study
 - `SAVINGS`: Saving algorithm (Clarke & Wright).
    
 and three local-search metaheuristics:  
-- `GUIDED_LOCAL_SEARCH`
-- `TABU_SEARCH`
-- `SIMULATED_ANNEALING`
+- `GUIDED_LOCAL_SEARCH`: Uses guided local search to escape local minima, which accecpts worse moves through penalities
+- `TABU_SEARCH`: Uses tabu search to escape local minima, which uses memory to temporarily forbid recently used moves.
+- `SIMULATED_ANNEALING`: TBD
 
 
 
 The underlying CVRP formulation and computational settings were kept fixed while search strategies were varied.
 
-
+`Guided Local Search` consistantly outperform `Tabu Local Search` and `Simulated Annealing` for all instances evaluated.     
+The table below shows the solution comparison for instance A-n48-k7:      
 | A-n48-k7 | `Guided Local Search` | `Tabu Local Search` | `Simulated Annealing` |
 |---|---:|---:|---|
 | `Parallel Cheapest Insertion` | 1088 | 1116 | 1152 | 
