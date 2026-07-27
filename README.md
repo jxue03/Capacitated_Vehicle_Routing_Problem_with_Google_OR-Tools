@@ -50,28 +50,22 @@ The implementation includes:
 
 Travel distances from CVRPLIB are rounded using the TSPLIB metric rounding convention.
 
-## Search Strategies
+## Search Algorithms
 
-Several first-solution strategies were evaluated, including:
-
+The search algorithms are evaluated in two stages: first-solution construction heuristics and local-search metaheuristics.
+Google OR-Tools provides a broad range of search strategies; however, this study mainly focuses on four relevant first-solution strategies:   
 - `PATH_CHEAPEST_ARC`
 - `PARALLEL_CHEAPEST_INSERTION`
 - `LOCAL_CHEAPEST_INSERTION`
-- `SAVINGS`
-- `GLOBAL_CHEAPEST_ARC`
-
-The following local-search metaheuristics were also compared:
-
+- `SAVINGS`  
+and three local-search metaheuristics:  
 - `GUIDED_LOCAL_SEARCH`
 - `TABU_SEARCH`
 - `SIMULATED_ANNEALING`
 
+
+
 The underlying CVRP formulation and computational settings were kept fixed while search strategies were varied.
-
-## Results
-
-Solution quality is evaluated relative to the published best-known solution (BKS) for each CVRPLIB instance.
-
 
 
 | A-n48-k7 | `Guided Local Search` | `Tabu Local Search` | `Simulated Annealing` |
@@ -81,8 +75,11 @@ Solution quality is evaluated relative to the published best-known solution (BKS
 | `Savings` | **1073** | 1097 | 1097 | 
 | `Local Cheapest Insertion` | 1084 | 1127 | 1192 |
 
+## Results
 
-
+Solution quality is evaluated relative to the published best-known solution (BKS) for each CVRPLIB instance.
+ 
+       
 | Instance | Best Known Solution (BKS) | Best OR-Tools Solution | Optimality Gap | Best Configuration |
 |---|---:|---:|---:|---|
 | A-n48-k7 | 1073 | 1073 | 0.00% | `Path Cheapest Arc` or `Savings` + `Guided Local Search` |
