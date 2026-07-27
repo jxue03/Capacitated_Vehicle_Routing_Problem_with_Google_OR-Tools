@@ -58,6 +58,7 @@ Google OR-Tools provides a broad range of search strategies; however, this study
 - `PARALLEL_CHEAPEST_INSERTION`: Iteratively build a solution by inserting the cheapest node at its cheapest position; the cost of insertion is based on the arc cost function.
 - `LOCAL_CHEAPEST_INSERTION`: Iteratively build a solution by inserting each node at its cheapest position; the cost of insertion is based on the arc cost function.
 - `SAVINGS`: Saving algorithm (Clarke & Wright).
+   
 and three local-search metaheuristics:  
 - `GUIDED_LOCAL_SEARCH`
 - `TABU_SEARCH`
