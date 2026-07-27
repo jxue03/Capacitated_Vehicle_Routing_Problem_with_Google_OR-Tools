@@ -132,13 +132,13 @@ With the local-search metaheuristic fixed to `Guided Local Search`, the four sel
 | `Savings` | **1073** | 1195 | 840 | 1307 | 15554 | 30889 | 
 | `Local Cheapest Insertion` | 1084 | **1184** | **829** | 1311 | **15150** | 30970 | 
 
-The experiments suggest that the effectiveness of the first-solution strategy is instance-dependent.
+The experiments suggest that the effectiveness of the first-solution strategy is instance-dependent, with no single strategy dominating across all benchmarks.
+                               
+#### Final Solution Quality and Benchmark Comparison:
 
-#### Final Results
-
-Then the best found solution are evaluated relative to the published best-known solution (BKS) for each CVRPLIB instance.
+The best solution obtained for each instance was evaluated relative to its published best-known solution (BKS). This comparison measures how closely the selected OR-Tools configurations approached the benchmark solution across instances of different sizes and difficulty levels.
                         
-| Instance | Best Known Solution (BKS) | Best OR-Tools Solution | Optimality Gap | Best Configuration |
+| Instance | Best Known Solution (BKS) | Best OR-Tools Solution | Optimality Gap | Best-Performing Configuration |
 |---|---:|---:|---:|---|
 | A-n48-k7 | 1073 | 1073 | 0.00% | `Path Cheapest Arc` or `Savings` + `Guided Local Search` |
 | A-n65-k9 | 1174 | 1184 | 0.85% | `Parallel Cheapest Insertion` or `Local Cheapest Insertion` + `Guided Local Search` |
@@ -151,15 +151,19 @@ The optimality gap is calculated as:
 
 **Gap (%) = (OR-Tools Solution - BKS) / BKS × 100**
 
-Across the five tested instances, OR-Tools matched the best-known solution on three instances and produced solutions within approximately 1% of the BKS on the remaining two.
+The results show that OR-Tools matched the published BKS exactly for A-n48-k7 and B-n41-k6, while remaining around 1% of the BKS for A-n65-k9, B-n68-k9, and X-n110-k13. The largest gap occurred for X-n129-k18 at 4.22%.
 
-## Key Findings
+The results show that the tested OR-Tools search configurations were capable of producing high-quality solutions across all six CVRPLIB instances, although the degree of success varied by instance. The published BKS was matched exactly for A-n48-k7 and B-n41-k6, while the solutions for A-n65-k9, B-n68-k9, and X-n110-k13 remained close to 1% of their respective benchmark values. X-n129-k18 proved more challenging under the same experimental framework, with the best tested configuration producing a 4.22% gap.
 
-**Guided Local Search performed consistently well.**  
-Across the tested instances and search configurations, `GUIDED_LOCAL_SEARCH` produced better final solutions than `TABU_SEARCH` and `SIMULATED_ANNEALING` under the same computational settings.
+#### Key Findings
+
+**Guided Local Search performed robustly well.**  
+Across the tested instances and search configurations, `GUIDED_LOCAL_SEARCH` produced significantly better final solutions than `TABU_SEARCH` and `SIMULATED_ANNEALING` under the same computational settings.
 
 **The first-solution strategy still affected final solution quality.**  
-Different construction heuristics sometimes led to different final solutions even after local search. For example, on `A-n65-k9`, both Parallel Cheapest Insertion and Global Cheapest Arc combined with Guided Local Search reached a distance of 1184, while Savings combined with Guided Local Search reached 1195.
+However, the construction heuristic paired with GLS varied across the instances: Path Cheapest Arc, Parallel Cheapest Insertion, Local Cheapest Insertion, and Savings each contributed to at least one best-performing configuration, without a universally dominant first-solution strategy.
 
-**Different initial solutions can converge to the same final solution.**  
-The identical 1184 result from multiple construction strategies on `A-n65-k9` suggests that Guided Local Search can move different initial solutions toward the same high-quality local optimum.
+**Different initial construction methods can converge to the same final solution.**  
+For A-n48-k7, both `Path Cheapest Arc` and `Savings` yield to the optimal solution.
+For A-n65-k9, both `Parallel Cheapest Insertion` and `Local Cheapest Insertion` yield to the optimal solution.
+For B-n41-k6, both `Path Cheapest Arc` or `Local Cheapest Insertion` yield to the optimal solution.
