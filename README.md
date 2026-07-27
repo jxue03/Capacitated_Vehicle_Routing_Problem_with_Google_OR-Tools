@@ -52,17 +52,47 @@ Travel distances from CVRPLIB are rounded using the TSPLIB metric rounding conve
 
 ## Search Algorithms
 
-Each instances are evaluated in two stages: first-solution construction heuristics and local-search metaheuristics.
-Google OR-Tools provides a broad range of search strategies; however, this study mainly focuses on four relevant first-solution strategies:   
-- `PATH_CHEAPEST_ARC`: Starting froma route "start" node, conect it to the node which produces the cheapest route segment, then extend the route by iterating on the last node added to the route.   
-- `PARALLEL_CHEAPEST_INSERTION`: Iteratively build a solution by inserting the cheapest node at its cheapest position; the cost of insertion is based on the arc cost function.
-- `LOCAL_CHEAPEST_INSERTION`: Iteratively build a solution by inserting each node at its cheapest position; the cost of insertion is based on the arc cost function.
-- `SAVINGS`: Saving algorithm (Clarke & Wright).
+Each CVRP instance is evaluated in two stages: a first-solution construction heuristic generates an initial feasible solution, followed by a local-search metaheuristic that improves the solution.
+
+
+
+
+Together, these strategies provide a diverse comparison of greedy path construction, parallel and sequential insertion, and savings-based route construction. Preliminary experimentation also indicated that these four strategies were competitive across the selected CVRPLIB instances, while additional OR-Tools strategies either provided limited additional insight or were less directly relevant to the scope of the study.
+
+
+
+Although Google OR-Tools provides a broad range of first-solution strategies, this study focuses on four representative and competitive construction heuristics. These strategies were selected to capture distinct route-construction approaches while keeping the experimental comparison manageable:
+
+- `PATH_CHEAPEST_ARC`: Start from a route "start" node, constructs routes sequentially by repeatedly extending the current route through the cheapest feasible arc. It represents a greedy, path-based construction approach.
+     
+- `PARALLEL_CHEAPEST_INSERTION`: Builds multiple routes simultaneously by repeatedly selecting low-cost feasible customer insertions across the developing routes. It represents a parallel insertion-based approach.
+    
+- `LOCAL_CHEAPEST_INSERTION`: Considers customers sequentially and inserts each customer into its cheapest feasible position among the existing routes. It provides a sequential insertion-based alternative to PCI.
+         
+- `SAVINGS`: A savings-based construction approach inspired by the Clarke-Wright Savings algorithm. Routes are formed by prioritizing combinations that reduce travel cost relative to serving customers separately from the depot.
    
 and three local-search metaheuristics:  
 - `GUIDED_LOCAL_SEARCH`: Uses guided local search to escape local minima, which accecpts worse moves through penalities
 - `TABU_SEARCH`: Uses tabu search to escape local minima, which uses memory to temporarily forbid recently used moves.
 - `SIMULATED_ANNEALING`: TBD
+
+
+Three local-search metaheuristics are then evaluated for improving the constructed solutions:
+
+- `GUIDED_LOCAL_SEARCH` (GLS): Escapes local optima by dynamically penalizing costly solution features, encouraging the search to explore alternative regions of the solution space.
+
+- `TABU_SEARCH`: Uses short-term search memory to temporarily restrict recently used moves, reducing cycling and encouraging exploration beyond the current local optimum.
+
+- `SIMULATED_ANNEALING` (SA): Probabilistically accepts some worsening moves, particularly earlier in the search, to escape local optima and explore alternative solutions.
+
+
+
+
+
+
+
+
+`PATH_CHEAPEST_ARC` represents greedy path-based construction, `PARALLEL_CHEAPEST_INSERTION` and `LOCAL_CHEAPEST_INSERTION` represent two distinct insertion-based approaches, and `SAVINGS` represents a classical savings-based route-merging approach. Preliminary experimentation indicated that these strategies were competitive across the selected CVRPLIB instances, while additional strategies provided limited additional insight or were less directly suited to the scope of the study.
 
 ## Results
 
