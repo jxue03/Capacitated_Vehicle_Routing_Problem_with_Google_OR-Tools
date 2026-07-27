@@ -51,10 +51,12 @@ $$
 x_{ijk} =
 \begin{cases}
 1, & \text{if vehicle } k \text{ travels directly from node } i \text{ to node } j,\\
-0, & \text{otherwise.}
+0, & \text{otherwise,}
 \end{cases}
+\qquad
+\forall i,j \in V,\; i \neq j,\; k \in K
 $$
-
+                 
 ### Objective Function
 
 The objective is to minimize the total distance traveled across all vehicle routes:
