@@ -62,7 +62,7 @@ The objective is to minimize the total distance traveled across all vehicle rout
 $$
 \min \sum_{k \in K}
 \sum_{i \in V}
-\sum_{\substack{j \in V \\ (j \neq i)}}
+\sum_{\substack{j \in V \\ ,j \neq i}}
 c_{ij}x_{ij}
 $$
 
@@ -72,7 +72,7 @@ Each customer must be visited exactly once by one vehicle:
 
 $$
 \sum_{k \in K}
-\sum_{\substack{j \in V \\ j \neq i}}
+\sum_{\substack{j \in V \\ , j \neq i}}
 x_{ijk} = 1
 \qquad \forall i \in C
 $$
@@ -84,7 +84,7 @@ The total demand assigned to each vehicle cannot exceed its capacity:
 $$
 \sum_{i \in C}
 q_i
-\sum_{\substack{j \in V \\ j \neq i}}
+\sum_{\substack{j \in V \\ ,j \neq i}}
 x_{ijk}
 \leq Q
 \qquad \forall k \in K
@@ -95,7 +95,7 @@ $$
 For each vehicle, entering a customer node requires leaving that node:
 
 $$
-\sum_{\substack{j \in V \\ j \neq i}} x_{ijk} = \sum_{\substack{j \in V \\ j \neq i}} x_{jik} \qquad \forall i \in C, k \in K
+\sum_{\substack{j \in V \\, j \neq i}} x_{ijk} = \sum_{\substack{j \in V \\ ,j \neq i}} x_{jik} \qquad \forall i \in C, k \in K
 $$
 
 
