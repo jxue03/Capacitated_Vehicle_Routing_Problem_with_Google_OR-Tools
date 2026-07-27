@@ -41,7 +41,6 @@ Let:
 
 - $V = \{0,1,\ldots,n\}$ be the set of nodes, where node $0$ represents the depot.
 - $C = V \setminus \{0\}$ be the set of customers.
-- $K = \{1,\ldots,m\}$ be the set of vehicles.
 - $c_{ij}$ be the travel distance from node $i$ to node $j$.
 - $q_i$ be the demand of customer $i$.
 - $Q$ be the capacity of each vehicle.
@@ -49,9 +48,9 @@ Let:
 Define the binary decision variable:
 
 $$
-x_{ijk} =
+x_{ij} =
 \begin{cases}
-1, & \text{if vehicle } k \text{ travels directly from node } i \text{ to node } j,\\
+1, & \text{if vehicle } \text{ travels directly from node } i \text{ to node } j,\\
 0, & \text{otherwise.}
 \end{cases}
 $$
