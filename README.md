@@ -56,7 +56,7 @@ x_{ijk} =
 \forall i,j \in V\; i \neq j\; k \in K
 $$
                  
-### Objective Function
+#### Objective Function
 
 The objective is to minimize the total distance traveled across all vehicle routes:
 
@@ -67,7 +67,7 @@ $$
 c_{ij}x_{ijk}
 $$
 
-### Customer Coverage
+#### Customer Coverage
 
 Each customer must be visited exactly once by one vehicle:
 
@@ -78,7 +78,7 @@ x_{ijk} = 1
 \qquad \forall i \in C
 $$
 
-### Vehicle Capacity
+#### Vehicle Capacity
 
 The total demand assigned to each vehicle cannot exceed its capacity:
 
@@ -91,7 +91,7 @@ x_{ijk}
 \qquad \forall k \in K
 $$
 
-### Flow Conservation
+#### Flow Conservation
 
 For each vehicle, entering a customer node requires leaving that node:
 
@@ -99,7 +99,7 @@ $$
 \sum_{\substack{j \in V \\ j \neq i}} x_{ijk} = \sum_{\substack{j \in V \\ j \neq i}} x_{jik} \qquad \forall i \in C,\; k \in K
 $$ 
 
-### Depot Constraints
+#### Depot Constraints
 
 Each used vehicle departs from and returns to the depot at most once:
 
