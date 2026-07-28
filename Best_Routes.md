@@ -100,8 +100,8 @@ Load of the route: 98
      
 **Configuration:** `LOCAL_CHEAPEST_INSERTION` + `GUIDED_LOCAL_SEARCH`  
 **Objective:** 829  
-**BKS:** 829
-**Gap:** 0.00%
+**BKS:** 829    
+**Gap:** 0.00%    
 
 **Route for vehicle 1:**
 0 Load(0) -> 1 Load(6) -> 29 Load(18) -> 14 Load(28) -> 17 Load(36) -> 32 Load(53) -> 12 Load(76) -> 36 Load(92) -> 30 Load(100) -> 0 Load(100)   
@@ -137,8 +137,8 @@ Load of the route: 79
      
 **Configuration:** `PATH_CHEAPEST_ARC` + `GUIDED_LOCAL_SEARCH`  
 **Objective:** 1289  
-**BKS:** 1272
-**Gap:** 1.34%
+**BKS:** 1272    
+**Gap:** 1.34%    
    
 **Route for vehicle 1:**   
 0 Load(0) -> 19 Load(10) -> 53 Load(20) -> 38 Load(30) -> 40 Load(46) -> 50 Load(58) -> 63 Load(61) -> 0 Load(61)       
