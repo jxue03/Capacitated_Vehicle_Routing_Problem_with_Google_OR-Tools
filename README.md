@@ -142,7 +142,7 @@ CVRP_solved_by_ORtools.py
 ├── Configure search
 │   ├── First-solution strategy
 │   ├── Local-search metaheuristic
-│   └── Time limit
+│   └── Time limit = 80
 │
 ├── Solve
 │
