@@ -299,7 +299,7 @@ The benchmark results demonstrate that the OR-Tools Routing Solver can produce s
     
 **2) Single Solver Framework:** This study focuses exclusively on the Google OR-Tools Routing Solver. No comparison was made with other optimization software or specialized state-of-the-art CVRP algorithms such as Hybrid Genetic Search (HGS), Adaptive Large Neighborhood Search (ALNS), or exact branch-and-cut methods. Therefore, the reported solutions should not be interpreted as the best achievable results for each benchmark instance.
      
-**3) Limited Assumptions and Scope:**  CVRPLIB benchmark instances represent the classical CVRP with homogeneous vehicles and deterministic customer demands. Consequently, they do not capture many characteristics of real-world vehicle routing problems, such as time windows, multiple depots, heterogeneous fleets, pickup-and-delivery operations, traffic conditions, stochastic travel times, or dynamic customer requests.
+**3) Benchmark Limitation:**  CVRPLIB benchmark instances represent the classical CVRP with homogeneous vehicles and deterministic customer demands. Consequently, they do not capture many characteristics of real-world vehicle routing problems, such as time windows, multiple depots, heterogeneous fleets, pickup-and-delivery operations, traffic conditions, stochastic travel times, or dynamic customer requests.
                  
 **4) Limited Performance Metrics:** Solution quality was primarily evaluated using total routing distance and optimality gap relative to published best-known solutions. Other performance metrics, such as computation time, search convergence, memory usage, or route balance among vehicles, were not analyzed.
           
