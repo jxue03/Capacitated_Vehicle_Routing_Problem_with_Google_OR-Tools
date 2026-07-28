@@ -153,7 +153,7 @@ CVRP_solved_by_ORtools.py
 ```
 
                           
-## Search Algorithms
+## Algorithms
 
 Each CVRP instance is evaluated in two stages: a first-solution construction heuristic generates an initial feasible solution, followed by a local-search metaheuristic that improves the solution.
                    
