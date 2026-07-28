@@ -294,3 +294,11 @@ For B-n41-k6, both `Path Cheapest Arc` or `Local Cheapest Insertion` yield to th
 
 ## Conclusion
 The benchmark results demonstrate that the OR-Tools Routing Solver can produce solutions that are highly competitive with published CVRPLIB benchmarks using heuristic search. However, solution quality varied across benchmark instances and search configurations. While Guided Local Search consistently provided strong improvement, no single first-solution construction heuristic dominated across all instances. These findings highlight both the strength and limitations of OR-Tools as a heuristic routing framework: it can efficiently generate high-quality CVRP solutions, but the choice of search configuration affect solution quality, and optimality is not guaranteed.
+
+## Limitations
+         
+Although these instances cover a range of routing characteristics, they represent only a small portion of the available benchmark library. Consequently, the observed performance trends should not be generalized to all CVRP instances. 
+    
+In addition, the experiments focus exclusively on the Google OR-Tools Routing Solver. The reported results therefore reflect the performance of the selected OR-Tools search configurations rather than the best achievable solutions obtainable from specialized state-of-the-art CVRP algorithms. 
+
+Finally, the experiments were conducted under fixed solver settings, including a common time limit and search parameters, so different parameter configurations may lead to different solution quality.
