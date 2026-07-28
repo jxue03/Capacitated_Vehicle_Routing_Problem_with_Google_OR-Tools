@@ -294,11 +294,19 @@ For B-n41-k6, both `Path Cheapest Arc` or `Local Cheapest Insertion` yield to th
 
 ## Conclusion
 The benchmark results demonstrate that the OR-Tools Routing Solver can produce solutions that are highly competitive with published CVRPLIB benchmarks using heuristic search. However, solution quality varied across benchmark instances and search configurations. While Guided Local Search consistently provided strong improvement, no single first-solution construction heuristic dominated across all instances. These findings highlight both the strength and limitations of OR-Tools as a heuristic routing framework: it can efficiently generate high-quality CVRP solutions, but the choice of search configuration affect solution quality, and optimality is not guaranteed.
-
+      
 ## Limitations
-         
-Although these instances cover a range of routing characteristics, they represent only a small portion of the available benchmark library. Consequently, the observed performance trends should not be generalized to all CVRP instances. 
+       
+**1) Limited Benchmark Coverage:** Although these instances cover a range of routing characteristics, they represent only a small portion of the available benchmark library. Consequently, the observed performance trends should not be generalized to all CVRP instances.
     
-In addition, the experiments focus exclusively on the Google OR-Tools Routing Solver. The reported results therefore reflect the performance of the selected OR-Tools search configurations rather than the best achievable solutions obtainable from specialized state-of-the-art CVRP algorithms. 
-
-Finally, the experiments were conducted under fixed solver settings, including a common time limit and search parameters, so different parameter configurations may lead to different solution quality.
+**2) Single Solver Framework:** This study focuses exclusively on the Google OR-Tools Routing Solver. No comparison was made with other optimization software or specialized state-of-the-art CVRP algorithms such as Hybrid Genetic Search (HGS), Adaptive Large Neighborhood Search (ALNS), or exact branch-and-cut methods. Therefore, the reported solutions should not be interpreted as the best achievable results for each benchmark instance.
+     
+**3) Limited Problem Scope:** The project considers the classical CVRP with homogeneous vehicles and deterministic customer demands. Practical routing constraints such as time windows, multiple depots, heterogeneous fleets, pickup-and-delivery operations, or stochastic travel times were not included.
+              
+**4) Limited Performance Metrics:** Solution quality was primarily evaluated using total routing distance and optimality gap relative to published best-known solutions. Other performance metrics, such as computation time, search convergence, memory usage, or route balance among vehicles, were not analyzed.
+         
+**5) Deterministic Problem Assumptions:** All benchmark instances assume deterministic customer demands and travel distances. Real-world vehicle routing problems often involve uncertainty in travel times, customer requests, or traffic conditions, which were beyond the scope of this project.
+      
+**6) Limited Problem Scale:** Although the selected benchmark instances include medium- and large-scale problems, the study does not evaluate extremely large CVRP instances containing several hundred or thousands of customers. Solver performance on substantially larger problems may differ.
+          
+**7) Manual Parameter Selection:** The solver parameters were manually selected rather than systematically tuned. Automated parameter tuning or sensitivity analysis could potentially identify configurations that achieve better solution quality or faster convergence.
