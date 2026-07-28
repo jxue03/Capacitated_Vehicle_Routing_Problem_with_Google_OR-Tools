@@ -301,6 +301,4 @@ The benchmark results demonstrate that the OR-Tools Routing Solver can produce s
      
 **3) Benchmark Limitation:**  CVRPLIB benchmark instances represent the classical CVRP with homogeneous vehicles and deterministic customer demands. Consequently, they do not capture many characteristics of real-world vehicle routing problems, such as time windows, multiple depots, heterogeneous fleets, pickup-and-delivery operations, traffic conditions, stochastic travel times, or dynamic customer requests.
                  
-**4) Limited Performance Metrics:** Solution quality was primarily evaluated using total routing distance and optimality gap relative to published best-known solutions. Other performance metrics, such as computation time, search convergence, memory usage, or route balance among vehicles, were not analyzed.
-          
-**5) Manual Parameter Selection:** The solver parameters were manually selected rather than systematically tuned. Automated parameter tuning or sensitivity analysis could potentially identify configurations that achieve better solution quality or faster convergence.
+**4) Manual Parameter Selection:** The solver parameters were manually selected rather than systematically tuned. Automated parameter tuning or sensitivity analysis could potentially identify configurations that achieve better solution quality or faster convergence.
