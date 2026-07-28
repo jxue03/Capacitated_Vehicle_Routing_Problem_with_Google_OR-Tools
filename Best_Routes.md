@@ -2,8 +2,7 @@
    
 This file presents the detailed vehicle routes for the best solution found on each CVRPLIB benchmark instance using Google OR-Tools.
    
-### A-n48-k7
-     
+## A-n48-k7
 **Configuration:** `PATH_CHEAPEST_ARC` + `GUIDED_LOCAL_SEARCH`  
 **Objective:** 1073  
 **BKS:** 1073  
