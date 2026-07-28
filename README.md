@@ -228,7 +228,7 @@ The best solution obtained for each instance was evaluated relative to its publi
 
 The optimality gap is calculated as:
 
-**Gap (%) = (OR-Tools Solution - BKS) / BKS × 100**
+**Gap (%) = (Best Solved Solution - BKS) / BKS × 100**
        
 The results show that the tested OR-Tools search configurations were capable of producing high-quality solutions across all six CVRPLIB instances, although the degree of success varied by instance. The published BKS was matched exactly for A-n48-k7 and B-n41-k6, while the solutions for A-n65-k9, B-n68-k9, and X-n110-k13 remained close to 1% of their respective benchmark values. X-n129-k18 proved more challenging under the same experimental framework, with the best tested configuration producing a 4.22% gap.
 
