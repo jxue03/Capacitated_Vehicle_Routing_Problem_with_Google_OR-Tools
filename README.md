@@ -1,9 +1,7 @@
 # Capacitated Vehicle Routing Problems solved with Google OR-Tools
-                  
-The Capacitated Vehicle Routing Problem (CVRP) is a classical NP-hard combinatorial optimization problem that seeks to minimize total routing cost while serving all customer demands without exceeding vehicle-capacity constraints. Because exact optimization becomes increasingly difficult as problem size grows, heuristic and metaheuristic search methods are commonly used to obtain high-quality solutions efficiently.
-          
-The goal of the project is to explore how different OR-Tools routing strategies affect solution quality across CVRP instances of varying sizes and structures.
-
+        
+The Capacitated Vehicle Routing Problem (CVRP) is a classical NP-hard combinatorial optimization problem that seeks to minimize total routing cost while satisfying customer demands without exceeding vehicle-capacity constraints. As exact optimization becomes increasingly computationally expensive for larger instances, heuristic and metaheuristic methods are commonly used to obtain high-quality solutions efficiently. This project investigates how different Google OR-Tools routing strategies influence solution quality across CVRPLIB benchmark instances of varying sizes and structural characteristics.
+      
 ## Dataset
 
 Benchmark instances are obtained from **CVRPLIB**.
