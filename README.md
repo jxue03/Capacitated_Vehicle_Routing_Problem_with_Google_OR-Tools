@@ -234,7 +234,7 @@ The results show that the tested OR-Tools search configurations were capable of 
 
 #### Routing Plots:
 
-* For detailed routes for each benchmark instance, see `Best_Routes.md`.
+* For detailed routes solved using Google OR-Tools for each instance, see `Best_Routes.md`.
           
 <table>
   <tr>
