@@ -179,7 +179,7 @@ Preliminary experimentation indicated that these strategies performed competitiv
                                 
 ## Results
 
-#### Metaheuristic Comparison:
+### Metaheuristic Comparison:
                 
 The initial evaluation considered all combinations of the four selected first-solution construction heuristics and three local-search metaheuristics:                    
                 
@@ -200,7 +200,7 @@ For this instance, `Guided Local Search` produced lower final route distances un
                         
 This allowed the four construction heuristics to be evaluated across a broader range of CVRPLIB instances without testing less competitive metaheuristic configurations.
                
-#### First-Solution Construction Heuristics Comparison:
+### First-Solution Construction Heuristics Comparison:
               
 With the local-search metaheuristic fixed to `Guided Local Search`, the four selected first-solution construction heuristics were evaluated across all benchmark instances. In contrast to the consistent performance of GLS in the metaheuristic comparison, no single construction heuristic consistently outperformed the others. The best solution(s) for each instance are highlighted in bold.
      
@@ -213,7 +213,7 @@ With the local-search metaheuristic fixed to `Guided Local Search`, the four sel
 
 The experiments suggest that the effectiveness of the first-solution strategy is instance-dependent, with no single strategy dominating across all benchmarks.
                                
-#### Final Solution Quality and Benchmark Comparison:
+### Final Solution Quality and Benchmark Comparison:
 
 The best solution obtained for each instance was evaluated relative to its published best-known solution (BKS). This comparison measures how closely the selected OR-Tools configurations approached the benchmark solution across instances of different sizes and difficulty levels.
                         
@@ -232,7 +232,7 @@ The optimality gap is calculated as:
        
 The results show that the tested OR-Tools search configurations were capable of producing high-quality solutions across all six CVRPLIB instances, although the degree of success varied by instance. The published BKS was matched exactly for A-n48-k7 and B-n41-k6, while the solutions for A-n65-k9, B-n68-k9, and X-n110-k13 remained close to 1% of their respective benchmark values. X-n129-k18 proved more challenging under the same experimental framework, with the best tested configuration producing a 4.22% gap.
 
-#### Routing Plots:
+### Routing Plots:
 
 * For detailed routes solved using Google OR-Tools for each instance, see `Best_Routes.md`.
           
@@ -277,7 +277,7 @@ The results show that the tested OR-Tools search configurations were capable of 
   </tr>
 </table>
              
-#### Key Findings:
+### Key Findings:
 
 **`Guided Local Search` was a robust choice of metaheuristic**  
 Across the tested instances and search configurations, `GUIDED_LOCAL_SEARCH` produced significantly better final solutions than `TABU_SEARCH` and `SIMULATED_ANNEALING` under the same computational settings.
