@@ -192,3 +192,69 @@ Load of the route: 100
 **Objective:** 15150    
 **BKS:** 14971    
 **Gap:** 1.20%    
+   
+**Route for vehicle 1:**
+0 Load(0) -> 40 Load(7) -> 47 Load(13) -> 73 Load(22) -> 35 Load(29) -> 82 Load(38) -> 57 Load(48) -> 13 Load(57) -> 23 Load(65) -> 0 Load(65)   
+Distance of the route: 1133   
+Load of the route: 65   
+   
+**Route for vehicle 2:**   
+0 Load(0) -> 49 Load(8) -> 8 Load(18) -> 62 Load(25) -> 100 Load(30) -> 86 Load(37) -> 10 Load(42) -> 72 Load(52) -> 63 Load(60) -> 19 Load(65) -> 0 Load(65)       
+Distance of the route: 1214   
+Load of the route: 65   
+   
+**Route for vehicle 3:**   
+0 Load(0) -> 48 Load(10) -> 107 Load(17) -> 7 Load(26) -> 37 Load(33) -> 94 Load(39) -> 81 Load(49) -> 44 Load(55) -> 70 Load(63) -> 0 Load(63)   
+Distance of the route: 1470   
+Load of the route: 63   
+   
+**Route for vehicle 4:**   
+0 Load(0) -> 52 Load(6) -> 50 Load(16) -> 39 Load(22) -> 28 Load(32) -> 31 Load(39) -> 17 Load(46) -> 95 Load(51) -> 59 Load(59) -> 27 Load(64) -> 0 Load(64)       
+Distance of the route: 1077   
+Load of the route: 64   
+   
+**Route for vehicle 5:**   
+0 Load(0) -> 71 Load(5) -> 80 Load(11) -> 43 Load(21) -> 93 Load(27) -> 64 Load(36) -> 36 Load(45) -> 65 Load(55) -> 99 Load(64) -> 0 Load(64)   
+Distance of the route: 1251   
+Load of the route: 64   
+   
+**Route for vehicle 6:**   
+0 Load(0) -> 68 Load(6) -> 54 Load(11) -> 96 Load(17) -> 88 Load(27) -> 75 Load(33) -> 21 Load(43) -> 41 Load(53) -> 12 Load(58) -> 58 Load(66) -> 0 Load(66)       
+Distance of the route: 1252   
+Load of the route: 66   
+   
+**Route for vehicle 7:**   
+0 Load(0) -> 30 Load(5) -> 55 Load(15) -> 76 Load(22) -> 83 Load(32) -> 22 Load(38) -> 61 Load(44) -> 60 Load(49) -> 104 Load(54) -> 2 Load(64) -> 0 Load(64)       
+Distance of the route: 1281   
+Load of the route: 64   
+   
+**Route for vehicle 8:**   
+0 Load(0) -> 79 Load(9) -> 32 Load(14) -> 74 Load(21) -> 78 Load(27) -> 29 Load(37) -> 16 Load(46) -> 90 Load(56) -> 1 Load(64) -> 0 Load(64)   
+Distance of the route: 1251   
+Load of the route: 64   
+   
+**Route for vehicle 9:**   
+0 Load(0) -> 105 Load(5) -> 20 Load(13) -> 92 Load(22) -> 97 Load(30) -> 106 Load(37) -> 42 Load(45) -> 66 Load(53) -> 98 Load(58) -> 77 Load(65) -> 0 Load(65)     
+Distance of the route: 1559   
+Load of the route: 65   
+   
+**Route for vehicle 10:**   
+0 Load(0) -> 46 Load(8) -> 51 Load(18) -> 85 Load(23) -> 11 Load(33) -> 15 Load(40) -> 53 Load(45) -> 26 Load(52) -> 87 Load(60) -> 84 Load(65) -> 0 Load(65)       
+Distance of the route: 1235   
+Load of the route: 65   
+   
+**Route for vehicle 11:**   
+0 Load(0) -> 91 Load(8) -> 5 Load(18) -> 89 Load(28) -> 67 Load(33) -> 34 Load(39) -> 45 Load(49) -> 38 Load(56) -> 108 Load(65) -> 0 Load(65)
+Distance of the route: 794   
+Load of the route: 65   
+   
+**Route for vehicle 12:**
+0 Load(0) -> 18 Load(8) -> 25 Load(14) -> 103 Load(20) -> 24 Load(27) -> 4 Load(32) -> 101 Load(37) -> 9 Load(43) -> 33 Load(53) -> 102 Load(59) -> 56 Load(64) -> 0 Load(64)
+Distance of the route: 1087
+Load of the route: 64
+
+**Route for vehicle 13:**
+0 Load(0) -> 69 Load(10) -> 109 Load(19) -> 6 Load(24) -> 3 Load(32) -> 14 Load(42) -> 0 Load(42)
+Distance of the route: 546
+Load of the route: 42
+
