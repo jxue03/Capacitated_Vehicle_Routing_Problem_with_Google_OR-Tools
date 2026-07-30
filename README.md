@@ -242,7 +242,16 @@ Since the first five benchmark instances already achieved solutions close to the
 | `Path Cheapest Arc` | 30506 | 30320 | 30172 | 29995 | 
 | `Savings` | 30889 | 30359 | **29932** | **29932** | 
 | `Local Cheapest Insertion` | 30970 | 30799 | 30596 | -- | 
+     
+**Observations:**
+Under the initial 60-second time limit, **Parallel Cheapest Insertion** produced the best solution (30,217) among the four first solution strategies. After extending the runtime to 150 seconds, it further improved to **30,079**, but no additional improvement was observed at 250 or 350 seconds, indicating that the search had stabilized under the current settings.
 
+**Path Cheapest Arc** initially ranked second and demonstrated consistent improvement as the runtime increased. Its solution quality continued to improve at every tested time limit, eventually surpassing Parallel Cheapest Insertion and reaching **29,995** after 350 seconds.
+
+**Savings** ranked third at both 60 and 150 seconds, but exhibited the largest improvement with extended search. The objective value decreased substantially to **29,932** at 250 seconds, after which no further improvement was observed at 350 seconds. This remained the **best solution obtained** among all tested strategies and time limits.
+
+**Local Cheapest Insertion** consistently produced the weakest solutions throughout the experiments. Although minor improvements were observed as the runtime increased, it remained the lowest-performing strategy among the four and never became competitive with the other initialization methods.
+    
 ### Routing Plots:
 
 * For detailed routes solved using Google OR-Tools for each instance, see `Best_Routes.md`.
