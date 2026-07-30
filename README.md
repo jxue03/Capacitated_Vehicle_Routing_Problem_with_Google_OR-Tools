@@ -206,31 +206,41 @@ With the local-search metaheuristic fixed to `Guided Local Search`, the four sel
      
 | Instances | A-n48-k7 | A-n65-k9 | B-n41-k6 | B-n68-k9 | X-n110-k13 | X-n129-k18 |
 |---|---:|---:|---:|---:|---:|---|
-| `Parallel Cheapest Insertion` | 1088 | **1184** | 843 | 1290 | 15449 | **30161** | 
+| `Parallel Cheapest Insertion` | 1088 | **1184** | 843 | 1290 | 15449 | **30217** | 
 | `Path Cheapest Arc` | **1073** | 1218 | **829** | **1289** | 15260 | 30506 | 
-| `Savings` | **1073** | 1195 | 840 | 1307 | 15554 | 30889 | 
+| `Savings` | **1073** | 1195 | 840 | 1307 | 15640 | 30889 | 
 | `Local Cheapest Insertion` | 1084 | **1184** | **829** | 1311 | **15150** | 30970 | 
 
 The experiments suggest that the effectiveness of the first-solution strategy is instance-dependent, with no single strategy dominating across all benchmarks.
-                               
+                                            
 ### Final Solution Quality and Benchmark Comparison:
 
 The best solution obtained for each instance was evaluated relative to its published best-known solution (BKS). This comparison measures how closely the selected OR-Tools configurations approached the benchmark solution across instances of different sizes and difficulty levels.
                         
-| Instance | Best Known Solution (BKS) | Best Solved Solution | Optimality Gap | Best-Performing Configuration |
+| Instance | Best Known Solution (BKS) | Google-OR-Tools Solutions (time limit = 60) | Optimality Gap | Best-Performing Configuration |
 |---|---:|---:|---:|---|
 | A-n48-k7 | 1073 | 1073 | 0.00% | `Path Cheapest Arc` or `Savings` + `Guided Local Search` |
 | A-n65-k9 | 1174 | 1184 | 0.85% | `Parallel Cheapest Insertion` or `Local Cheapest Insertion` + `Guided Local Search` |
 | B-n41-k6 | 829 | 829 | 0.00% | `Path Cheapest Arc` or `Local Cheapest Insertion` + `Guided Local Search` |
 | B-n68-k9 | 1272 | 1289 | 1.34% | `Path Cheapest Arc` + `Guided Local Search`|
 | X-n110-k13 | 14971 | 15150 | 1.20% | `Local Cheapest Insertion` + `Guided Local Search` |
-| X-n129-k18 | 28940 | 30161 | 4.22% | `Parallel Cheapest Insertion` + `Guided Local Search` |
+| X-n129-k18 | 28940 | 30217 | 6.74% | `Parallel Cheapest Insertion` + `Guided Local Search` |
 
 The optimality gap is calculated as:
 
 **Gap (%) = (Best Solved Solution - BKS) / BKS × 100**
        
-The results show that the tested OR-Tools search configurations were capable of producing high-quality solutions across all six CVRPLIB instances, although the degree of success varied by instance. The published BKS was matched exactly for A-n48-k7 and B-n41-k6, while the solutions for A-n65-k9, B-n68-k9, and X-n110-k13 remained close to 1% of their respective benchmark values. X-n129-k18 proved more challenging under the same experimental framework, with the best tested configuration producing a 4.22% gap.
+
+### Time limit Comparison:
+
+Since the first five benchmark instances already achieved solutions close to the best-known solutions, and increasing the runtime resulted in negligible improvement, the default 60-second time limit was considered sufficient for those instances. However, X-n129-k18 still exhibited a relatively larger gap to the BKS after 60 seconds. Because the solution continued to improve with additional search time, further experiments with longer time limits were performed to evaluate the impact of runtime on solution quality and the best achievable results using Google OR-Tools.
+
+| X-n129-k18 | 60s | 150s | 250s | 350s |
+|---|---:|---:|---:|---|
+| `Parallel Cheapest Insertion` | 30217 | 30079 | 30079 | 30079 | 
+| `Path Cheapest Arc` | 30506 | 30320 | 30172 | 29995 | 
+| `Savings` | 30889 | 30359 | 29932 | 29932 | 
+| `Local Cheapest Insertion` | 30970 | 30799 | 30596 | -- | 
 
 ### Routing Plots:
 
