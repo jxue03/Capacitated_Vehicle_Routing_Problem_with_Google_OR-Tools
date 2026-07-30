@@ -112,7 +112,8 @@ def create_search_parameters():
     search_parameters.local_search_metaheuristic = (
         routing_enums_pb2.LocalSearchMetaheuristic.GUIDED_LOCAL_SEARCH
     )
-
+    
+    # time limit = 60, 120, 150, 250 were also tested
     search_parameters.time_limit.seconds = 60
     search_parameters.log_search = False
 
