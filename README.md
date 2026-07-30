@@ -251,6 +251,11 @@ Under the initial 60-second time limit, **Parallel Cheapest Insertion** produced
 **Savings** ranked third at both 60 and 150 seconds, but exhibited the largest improvement with extended search. The objective value decreased substantially to **29,932** at 250 seconds, after which no further improvement was observed at 350 seconds. This remained the **best solution obtained** among all tested strategies and time limits.
 
 **Local Cheapest Insertion** consistently produced the weakest solutions throughout the experiments. Although minor improvements were observed as the runtime increased, it remained the lowest-performing strategy among the four and never became competitive with the other initialization methods.
+
+- **Parallel** → strongest start, converges early.
+- **Path** → improves steadily and overtakes Parallel.
+- **Savings** → starts mediocre but eventually becomes the best.
+- **Local** → consistently underperforms.
     
 ### Routing Plots:
 
