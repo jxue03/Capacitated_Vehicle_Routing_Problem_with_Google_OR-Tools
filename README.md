@@ -230,16 +230,17 @@ The optimality gap is calculated as:
 
 **Gap (%) = (Best Solved Solution - BKS) / BKS × 100**
        
-
 ### Time limit Comparison:
 
 Since the first five benchmark instances already achieved solutions close to the best-known solutions, and increasing the runtime resulted in negligible improvement, the default 60-second time limit was considered sufficient for those instances. However, X-n129-k18 still exhibited a relatively larger gap to the BKS after 60 seconds. Because the solution continued to improve with additional search time, further experiments with longer time limits were performed to evaluate the impact of runtime on solution quality and the best achievable results using Google OR-Tools.
 
+
+      
 | X-n129-k18 | 60s | 150s | 250s | 350s |
 |---|---:|---:|---:|---|
-| `Parallel Cheapest Insertion` | 30217 | 30079 | 30079 | 30079 | 
+| `Parallel Cheapest Insertion` | **30217** | **30079** | 30079 | 30079 | 
 | `Path Cheapest Arc` | 30506 | 30320 | 30172 | 29995 | 
-| `Savings` | 30889 | 30359 | 29932 | 29932 | 
+| `Savings` | 30889 | 30359 | **29932** | **29932** | 
 | `Local Cheapest Insertion` | 30970 | 30799 | 30596 | -- | 
 
 ### Routing Plots:
