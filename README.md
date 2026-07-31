@@ -320,7 +320,7 @@ For A-n48-k7, both `Path Cheapest Arc` and `Savings` yield to the optimal soluti
 For A-n65-k9, both `Parallel Cheapest Insertion` and `Local Cheapest Insertion` yield to the same solution.    
 For B-n41-k6, both `Path Cheapest Arc` and `Local Cheapest Insertion` yield to the optimal solution.    
 
-**Increase Time Limit helps to improve solution quality until the search reaches a plateau.**
+**Increase Time Limit helps to improve solution quality until the search reaches a plateau.**      
 The effect of increasing the time limit depends on the benchmark instance. For most benchmark instances in this study, extending the runtime resulted in negligible improvement because high-quality solutions were already obtained within the default 60-second limit. However, for the more challenging X-n129-k18 instance, additional search time enabled Google OR-Tools to continue refining candidate solutions, leading to significant improvements before the objective value eventually stabilized. Once the search reached this plateau, further increases in runtime provided little or no additional benefit. These results highlight the trade-off between computational time and solution quality.
    
 ## Conclusion
