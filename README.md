@@ -251,13 +251,13 @@ Under the initial 60-second time limit, **Parallel Cheapest Insertion** produced
 
 **Local Cheapest Insertion** consistently produced the weakest solutions throughout the experiments. Although minor improvements were observed as the runtime increased, it remained the lowest-performing strategy among the four and never became competitive with the other initialization methods.
 
-- **Parallel** → strongest start, converges early.
-- **Path** → improves steadily and overtakes Parallel.
-- **Savings** → starts mediocre but eventually becomes the best.
-- **Local** → consistently underperforms.
+- `Parallel Cheapest Insertion → strongest start, converges early.
+- `Path Cheapest Arc` → improves steadily and overtakes Parallel.
+- `Savings` → starts mediocre but eventually becomes the best.
+- `Local Cheapest Insertion` → consistently underperforms.
     
 Here is the new best solution found after the extended time limit.
-| Instance | Best Known Solution (BKS) | Google-OR-Tools Solutions (time limit = 350) | Optimality Gap | Best-Performing Configuration |
+| Instance | Best Known Solution (BKS) | Google-OR-Tools Solution (time limit = 350) | Optimality Gap | Best-Performing Configuration |
 |---|---:|---:|---:|---|
 | X-n129-k18 | 28940 | 29932 | 3.43% | `Savings` + `Guided Local Search` |
 
