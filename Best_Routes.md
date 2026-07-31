@@ -6,9 +6,9 @@ This file presents the detailed vehicle routes for the best solution found on ea
 **Configuration:** `PATH_CHEAPEST_ARC` + `GUIDED_LOCAL_SEARCH`  
 **Objective:** 1073  
 **BKS:** 1073  
-**Gap:** 0.00%
-**Time Limit:** 60
-
+**Gap:** 0.00%      
+**Time Limit:** 60     
+     
 **Route for vehicle 1:**
 0 Load(0) -> 23 Load(12) -> 43 Load(25) -> 31 Load(27) -> 1 Load(47) -> 5 Load(69) -> 12 Load(91) -> 0 Load(91)               
 Distance of the route: 109                
@@ -50,9 +50,9 @@ Load of the route: 99
 **Configuration:** `PARALLEL_CHEAPEST_INSERTION` + `GUIDED_LOCAL_SEARCH`  
 **Objective:** 1184  
 **BKS:** 1174  
-**Gap:** 0.85%
-**Time Limit:** 60
-
+**Gap:** 0.85%     
+**Time Limit:** 60     
+     
 **Route for vehicle 1:**   
 0 Load(0) -> 7 Load(10) -> 63 Load(33) -> 11 Load(35) -> 57 Load(39) -> 48 Load(41) -> 54 Load(62) -> 39 Load(68) -> 51 Load(74) -> 17 Load(97) -> 0 Load(97)     
 Distance of the route: 120   
@@ -103,9 +103,9 @@ Load of the route: 98
 **Configuration:** `LOCAL_CHEAPEST_INSERTION` + `GUIDED_LOCAL_SEARCH`  
 **Objective:** 829  
 **BKS:** 829    
-**Gap:** 0.00%   
-**Time Limit:** 60
-
+**Gap:** 0.00%        
+**Time Limit:** 60     
+     
 **Route for vehicle 1:**
 0 Load(0) -> 1 Load(6) -> 29 Load(18) -> 14 Load(28) -> 17 Load(36) -> 32 Load(53) -> 12 Load(76) -> 36 Load(92) -> 30 Load(100) -> 0 Load(100)   
 Distance of the route: 177   
@@ -141,9 +141,9 @@ Load of the route: 79
 **Configuration:** `PATH_CHEAPEST_ARC` + `GUIDED_LOCAL_SEARCH`  
 **Objective:** 1289  
 **BKS:** 1272    
-**Gap:** 1.34%    
-**Time Limit:** 60
-   
+**Gap:** 1.34%         
+**Time Limit:** 60     
+        
 **Route for vehicle 1:**   
 0 Load(0) -> 19 Load(10) -> 53 Load(20) -> 38 Load(30) -> 40 Load(46) -> 50 Load(58) -> 63 Load(61) -> 0 Load(61)       
 Distance of the route: 57     
@@ -194,9 +194,9 @@ Load of the route: 100
 **Configuration:** `LOCAL_CHEAPEST_INSERTION` + `GUIDED_LOCAL_SEARCH`     
 **Objective:** 15150    
 **BKS:** 14971    
-**Gap:** 1.20%    
-**Time Limit:** 60
-   
+**Gap:** 1.20%         
+**Time Limit:** 60     
+        
 **Route for vehicle 1:**
 0 Load(0) -> 40 Load(7) -> 47 Load(13) -> 73 Load(22) -> 35 Load(29) -> 82 Load(38) -> 57 Load(48) -> 13 Load(57) -> 23 Load(65) -> 0 Load(65)   
 Distance of the route: 1133   
@@ -267,9 +267,9 @@ Load of the route: 42
 **Configuration:** `SAVINGS` + `GUIDED_LOCAL_SEARCH`     
 **Objective:** 29932    
 **BKS:** 28940    
-**Gap:** 3.43%   
-**Time Limit:** 350
-              
+**Gap:** 3.43%        
+**Time Limit:** 350     
+                   
 **Route for vehicle 1:**        
 0 Load(0) -> 77 Load(5) -> 35 Load(7) -> 57 Load(11) -> 33 Load(15) -> 21 Load(17) -> 34 Load(25) -> 2 Load(33) -> 48 Load(37) -> 46 Load(39) -> 0 Load(39)              
 Distance of the route: 2873        
