@@ -299,9 +299,9 @@ Here is the new best solution found after the extended time limit.
       <sub>LOCAL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH</sub>
     </td>
     <td align="center">
-      <img src="RoutingPlots/X-n129-k18_PARALLEL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
+      <img src="RoutingPlots/X-n129-k18_SAVINGS_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>X-n129-k18</b><br>
-      <sub>PARALLEL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH</sub>
+      <sub>SAVINGS + GUIDED_LOCAL_SEARCH</sub>
     </td>
   </tr>
 </table>
@@ -328,3 +328,4 @@ The benchmark results demonstrate that the OR-Tools Routing Solver can produce s
     
 **2) Single-Solver Evaluation:** This study focuses exclusively on the Google OR-Tools Routing Solver. No comparison was made with other optimization software or specialized state-of-the-art CVRP algorithms such as Hybrid Genetic Search (HGS), Adaptive Large Neighborhood Search (ALNS), or exact branch-and-cut methods. Therefore, the reported solutions should not be interpreted as the best achievable results for each benchmark instance.
    
+**3) 
