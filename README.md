@@ -257,7 +257,7 @@ Under the initial 60-second time limit, **Parallel Cheapest Insertion** produced
 - **Local** → consistently underperforms.
     
 Here is the new best solution found after the extended time limit.
-| Instance | Best Known Solution (BKS) | Google-OR-Tools Solutions (time limit = 60) | Optimality Gap | Best-Performing Configuration |
+| Instance | Best Known Solution (BKS) | Google-OR-Tools Solutions (time limit = 350) | Optimality Gap | Best-Performing Configuration |
 |---|---:|---:|---:|---|
 | X-n129-k18 | 28940 | 29932 | 3.43% | `Savings` + `Guided Local Search` |
 
