@@ -231,11 +231,9 @@ The optimality gap is calculated as:
 **Gap (%) = (Best Solved Solution - BKS) / BKS × 100**
        
 ### Time limit Comparison:
-
-Since the first five benchmark instances already achieved solutions close to the best-known solutions, and increasing the runtime resulted in negligible improvement, the default 60-second time limit was considered sufficient for those instances. However, X-n129-k18 still exhibited a relatively larger gap to the BKS after 60 seconds. Because the solution continued to improve with additional search time, further experiments with longer time limits were performed to evaluate the impact of runtime on solution quality and the best achievable results using Google OR-Tools.
-
-
       
+Since the first five benchmark instances already achieved solutions close to the best-known solutions, and increasing the runtime resulted in negligible improvement, the default 60-second time limit was considered sufficient for those instances. However, X-n129-k18 still exhibited a relatively larger gap to the BKS after 60 seconds. Because the solution continued to improve with additional search time, further experiments with longer time limits were performed to evaluate the impact of runtime on solution quality and the best achievable results using Google OR-Tools.
+        
 | X-n129-k18 | 60s | 150s | 250s | 350s |
 |---|---:|---:|---:|---|
 | `Parallel Cheapest Insertion` | **30217** | **30079** | 30079 | 30079 | 
@@ -243,7 +241,6 @@ Since the first five benchmark instances already achieved solutions close to the
 | `Savings` | 30889 | 30359 | **29932** | **29932** | 
 | `Local Cheapest Insertion` | 30970 | 30799 | 30596 | -- | 
      
-**Observations:**
 Under the initial 60-second time limit, **Parallel Cheapest Insertion** produced the best solution (30,217) among the four first solution strategies. After extending the runtime to 150 seconds, it further improved to **30,079**, but no additional improvement was observed at 250 or 350 seconds, indicating that the search had stabilized under the current settings.
 
 **Path Cheapest Arc** initially ranked second and demonstrated consistent improvement as the runtime increased. Its solution quality continued to improve at every tested time limit, eventually surpassing Parallel Cheapest Insertion and reaching **29,995** after 350 seconds.
@@ -257,6 +254,13 @@ Under the initial 60-second time limit, **Parallel Cheapest Insertion** produced
 - **Savings** → starts mediocre but eventually becomes the best.
 - **Local** → consistently underperforms.
     
+Here is the new best solution found after the extended time limit.
+| Instance | Best Known Solution (BKS) | Google-OR-Tools Solutions (time limit = 60) | Optimality Gap | Best-Performing Configuration |
+|---|---:|---:|---:|---|
+| X-n129-k18 | 28940 | 29932 | 3.43% | `Savings` + `Guided Local Search` |
+      
+
+
 ### Routing Plots:
 
 * For detailed routes solved using Google OR-Tools for each instance, see `Best_Routes.md`.
