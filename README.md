@@ -251,7 +251,7 @@ Under the initial 60-second time limit, **Parallel Cheapest Insertion** produced
 
 **Local Cheapest Insertion** consistently produced the weakest solutions throughout the experiments. Although minor improvements were observed as the runtime increased, it remained the lowest-performing strategy among the four and never became competitive with the other initialization methods.
 
-- `Parallel Cheapest Insertion → strongest start, converges early.
+- `Parallel Cheapest Insertion` → strongest start, converges early.
 - `Path Cheapest Arc` → improves steadily and overtakes Parallel.
 - `Savings` → starts mediocre but eventually becomes the best.
 - `Local Cheapest Insertion` → consistently underperforms.
@@ -270,12 +270,12 @@ Here is the new best solution found after the extended time limit.
     <td align="center">
       <img src="RoutingPlots/A-n48-k7_PATH_CHEAPEST_ARC_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>A-n48-k7</b><br>
-      <sub>PATH_CHEAPEST_ARC + GUIDED_LOCAL_SEARCH</sub>
+      <sub>PATH_CHEAPEST_ARC + GUIDED_LOCAL_SEARCH_60s</sub>
     </td>
     <td align="center">
       <img src="RoutingPlots/A-n65-k9_PARALLEL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>A-n65-k9</b><br>
-      <sub>PARALLEL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH</sub>
+      <sub>PARALLEL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH_60s</sub>
     </td>
   </tr>
 
@@ -283,12 +283,12 @@ Here is the new best solution found after the extended time limit.
     <td align="center">
       <img src="RoutingPlots/B-n41-k6_LOCAL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>B-n41-k6</b><br>
-      <sub>LOCAL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH</sub>
+      <sub>LOCAL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH_60s</sub>
     </td>
     <td align="center">
       <img src="RoutingPlots/B-n68-k9_PATH_CHEAPEST_ARC_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>B-n68-k9</b><br>
-      <sub>PATH_CHEAPEST_ARC + GUIDED_LOCAL_SEARCH</sub>
+      <sub>PATH_CHEAPEST_ARC + GUIDED_LOCAL_SEARCH_60s</sub>
     </td>
   </tr>
 
@@ -296,12 +296,12 @@ Here is the new best solution found after the extended time limit.
     <td align="center">
       <img src="RoutingPlots/X-n110-k13_LOCAL_CHEAPEST_INSERTION_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>X-n110-k13</b><br>
-      <sub>LOCAL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH</sub>
+      <sub>LOCAL_CHEAPEST_INSERTION + GUIDED_LOCAL_SEARCH_60s</sub>
     </td>
     <td align="center">
       <img src="RoutingPlots/X-n129-k18_SAVINGS_and_GUIDED_LOCAL_SEARCH.png" width="420"><br>
       <b>X-n129-k18</b><br>
-      <sub>SAVINGS + GUIDED_LOCAL_SEARCH</sub>
+      <sub>SAVINGS + GUIDED_LOCAL_SEARCH_350s</sub>
     </td>
   </tr>
 </table>
