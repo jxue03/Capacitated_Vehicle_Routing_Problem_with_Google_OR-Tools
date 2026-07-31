@@ -3,10 +3,8 @@
 The Capacitated Vehicle Routing Problem (CVRP) is a classical NP-hard combinatorial optimization problem that seeks to minimize total routing cost while satisfying customer demands without exceeding vehicle-capacity constraints. As exact optimization becomes increasingly computationally expensive for larger instances, heuristic and metaheuristic methods are commonly used to obtain high-quality solutions efficiently. 
      
 **Objective:**     
-This project investigates how Google OR-Tools constraint solver influence solution quality across CVRPLIB benchmark instances of varying sizes and structural characteristics by investigative how different first-solution construction heuristics, local-search metaheuristics, and runtme
-
-
-      
+This project models and evaluates the performance of Google OR-Tools for solving the Capacitated Vehicle Routing Problem (CVRP) using benchmark instances from CVRPLIB of varying sizes and structural characteristics. Specifically, it investigates how first-solution strategies, local-search metaheuristics, and runtime limits affect solution quality under computational budgets, with performance measured against the best-known solutions (BKS) published by CVRPLIB.
+           
 ## Dataset
 
 Benchmark instances are obtained from **CVRPLIB**.
@@ -263,8 +261,6 @@ Here is the new best solution found after the extended time limit.
 | Instance | Best Known Solution (BKS) | Google-OR-Tools Solutions (time limit = 60) | Optimality Gap | Best-Performing Configuration |
 |---|---:|---:|---:|---|
 | X-n129-k18 | 28940 | 29932 | 3.43% | `Savings` + `Guided Local Search` |
-      
-
 
 ### Routing Plots:
 
@@ -328,7 +324,10 @@ For B-n41-k6, both `Path Cheapest Arc` and `Local Cheapest Insertion` yield to t
 The effect of increasing the time limit depends on the benchmark instance. For most benchmark instances in this study, extending the runtime resulted in negligible improvement because high-quality solutions were already obtained within the default 60-second limit. However, for the more challenging X-n129-k18 instance, additional search time enabled Google OR-Tools to continue refining candidate solutions, leading to significant improvements before the objective value eventually stabilized. Once the search reached this plateau, further increases in runtime provided little or no additional benefit. These results highlight the trade-off between computational time and solution quality.
    
 ## Conclusion
-The benchmark results demonstrate that the OR-Tools Routing Solver can produce solutions that are highly competitive with published CVRPLIB benchmarks using heuristic search. However, solution quality varied across benchmark instances and search configurations. While Guided Local Search consistently provided strong improvement, no single first-solution construction heuristic dominated across all instances. These findings highlight both the strength and limitations of OR-Tools as a heuristic routing framework: it can efficiently generate high-quality CVRP solutions, but the choice of search configuration affect solution quality, and optimality is not guaranteed.
+     
+The benchmark results demonstrate that the Google OR-Tools Routing Solver can produce solutions that are highly competitive with published CVRPLIB best-known solutions using heuristic search. However, solution quality varied across benchmark instances and search configurations. While `Guided Local Search` consistently provided the strongest improvements among the tested metaheuristics, no single first-solution construction heuristic consistently outperformed the others across all benchmark instances. The runtime analysis further showed that the impact of increasing the time limit depends on the problem instance: Most benchmark instances achieved near-best solutions within the default computational budget, whereas more challenging instances continued to improve with additional search time before reaching a point at which no further improvement was observed within the tested limits. 
+    
+Overall, these findings highlight both the strengths and limitations of OR-Tools as a heuristic routing framework: it can efficiently generate high-quality CVRP solutions, but solution quality depends on the choice of search strategy, runtime budget, and problem characteristics, and optimality cannot be guaranteed.
       
 ## Limitations
        
