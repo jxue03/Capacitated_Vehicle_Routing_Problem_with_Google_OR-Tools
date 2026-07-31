@@ -239,7 +239,7 @@ Since the first five benchmark instances already achieved solutions close to the
 | `Parallel Cheapest Insertion` | **30217** | **30079** | 30079 | 30079 | 
 | `Path Cheapest Arc` | 30506 | 30320 | 30172 | 29995 | 
 | `Savings` | 30889 | 30359 | **29932** | **29932** | 
-| `Local Cheapest Insertion` | 30970 | 30799 | 30596 | -- | 
+| `Local Cheapest Insertion` | 30970 | 30799 | 30596 | 30596 | 
      
 Under the initial 60-second time limit, **Parallel Cheapest Insertion** produced the best solution (30,217) among the four first solution strategies. After extending the runtime to 150 seconds, it further improved to **30,079**, but no additional improvement was observed at 250 or 350 seconds, indicating that the search had stabilized under the current settings.
 
@@ -312,13 +312,16 @@ Here is the new best solution found after the extended time limit.
 Across the tested instances and search configurations, `GUIDED_LOCAL_SEARCH` produced significantly better final solutions than `TABU_SEARCH` and `SIMULATED_ANNEALING` under the same computational settings.
 
 **The first-solution strategies are instance-dependent.**  
-However, the construction heuristic paired with GLS varied across the instances: Path Cheapest Arc, Parallel Cheapest Insertion, Local Cheapest Insertion, and Savings each contributed to at least one best-performing configuration, without a universally dominant first-solution strategy.
+However, the construction heuristic paired with `Guided Local Search` varied across the instances: `Path Cheapest Arc`, `Parallel Cheapest Insertion`, `Local Cheapest Insertion`, and `Savings` each contributed to at least one best-performing configuration, without a universally dominant first-solution strategy.
 
-**Different initial construction methods can converge to the same final solution.**  
+**Different initial construction methods can lead to the same result.**  
 For A-n48-k7, both `Path Cheapest Arc` and `Savings` yield to the optimal solution.   
-For A-n65-k9, both `Parallel Cheapest Insertion` and `Local Cheapest Insertion` yield to the optimal solution.    
-For B-n41-k6, both `Path Cheapest Arc` or `Local Cheapest Insertion` yield to the optimal solution.    
+For A-n65-k9, both `Parallel Cheapest Insertion` and `Local Cheapest Insertion` yield to the same solution.    
+For B-n41-k6, both `Path Cheapest Arc` and `Local Cheapest Insertion` yield to the optimal solution.    
 
+**Increase Time Limit helps to improve solution quality until the search reaches a plateau.**
+The effect of increasing the time limit depends on the benchmark instance. For most benchmark instances in this study, extending the runtime resulted in negligible improvement because high-quality solutions were already obtained within the default 60-second limit. However, for the more challenging X-n129-k18 instance, additional search time enabled Google OR-Tools to continue refining candidate solutions, leading to significant improvements before the objective value eventually stabilized. Once the search reached this plateau, further increases in runtime provided little or no additional benefit. These results highlight the trade-off between computational time and solution quality.
+   
 ## Conclusion
 The benchmark results demonstrate that the OR-Tools Routing Solver can produce solutions that are highly competitive with published CVRPLIB benchmarks using heuristic search. However, solution quality varied across benchmark instances and search configurations. While Guided Local Search consistently provided strong improvement, no single first-solution construction heuristic dominated across all instances. These findings highlight both the strength and limitations of OR-Tools as a heuristic routing framework: it can efficiently generate high-quality CVRP solutions, but the choice of search configuration affect solution quality, and optimality is not guaranteed.
       
@@ -328,4 +331,4 @@ The benchmark results demonstrate that the OR-Tools Routing Solver can produce s
     
 **2) Single-Solver Evaluation:** This study focuses exclusively on the Google OR-Tools Routing Solver. No comparison was made with other optimization software or specialized state-of-the-art CVRP algorithms such as Hybrid Genetic Search (HGS), Adaptive Large Neighborhood Search (ALNS), or exact branch-and-cut methods. Therefore, the reported solutions should not be interpreted as the best achievable results for each benchmark instance.
    
-**3) 
+**3) Time Limit Selection:** The time limits evaluated in this study were selected empirically and are not guaranteed to represent the point of true convergence for every benchmark instance. Although additional runtime produced little or no improvement for most tested instances, longer searches may still discover better solutions for certain instances. Therefore, the reported results should be interpreted as the best solutions obtained within the specified computational budgets rather than the best achievable solutions using Google OR-Tools.
