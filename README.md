@@ -235,7 +235,9 @@ The optimality gap is calculated as:
 ### Time limit Comparison:
       
 Since the first five benchmark instances already achieved solutions close to the best-known solutions, and increasing the runtime resulted in negligible improvement, the default 60-second time limit was considered sufficient for those instances. However, X-n129-k18 still exhibited a relatively larger gap to the BKS after 60 seconds. Because the solution continued to improve with additional search time, further experiments with longer time limits were performed to evaluate the impact of runtime on solution quality and the best achievable results using Google OR-Tools.
-        
+   
+The time limit was not extended beyond 350 seconds because the observed improvements became negligible with further increases in runtime.        
+    
 | X-n129-k18 | 60s | 150s | 250s | 350s |
 |---|---:|---:|---:|---|
 | `Parallel Cheapest Insertion` | **30217** | **30079** | 30079 | 30079 | 
