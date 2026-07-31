@@ -251,6 +251,7 @@ Under the initial 60-second time limit, **Parallel Cheapest Insertion** produced
 
 **Local Cheapest Insertion** consistently produced the weakest solutions throughout the experiments. Although minor improvements were observed as the runtime increased, it remained the lowest-performing strategy among the four and never became competitive with the other initialization methods.
 
+**Summary:**   
 - `Parallel Cheapest Insertion` → strongest start, stabilizes early, resulted the 3rd best.
 - `Path Cheapest Arc` → improves steadily and overtakes Parallel Cheapest Insertion, resulted the 2nd best.
 - `Savings` → starts mediocre but eventually becomes the best.
