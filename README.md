@@ -219,7 +219,7 @@ The experiments suggest that the effectiveness of the first-solution strategy is
 
 The best solution obtained for each instance was evaluated relative to its published best-known solution (BKS). This comparison measures how closely the selected OR-Tools configurations approached the benchmark solution across instances of different sizes and difficulty levels.
                         
-| Instance | Best Known Solution (BKS) | Google-OR-Tools Solutions (time limit = 60) | Optimality Gap | Best-Performing Configuration |
+| Instance | Best Known Solution (BKS) | Best found Google-OR-Tools Solution (time limit = 60) | Optimality Gap | Best-Performing Configuration |
 |---|---:|---:|---:|---|
 | A-n48-k7 | 1073 | 1073 | 0.00% | `Path Cheapest Arc` or `Savings` + `Guided Local Search` |
 | A-n65-k9 | 1174 | 1184 | 0.85% | `Parallel Cheapest Insertion` or `Local Cheapest Insertion` + `Guided Local Search` |
