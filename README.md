@@ -338,3 +338,12 @@ Overall, these findings highlight both the strengths and limitations of OR-Tools
 **2) Single-Solver Evaluation:** This study focuses exclusively on the Google OR-Tools Routing Solver. No comparison was made with other optimization software or specialized state-of-the-art CVRP algorithms such as Hybrid Genetic Search (HGS), Adaptive Large Neighborhood Search (ALNS), or exact branch-and-cut methods. Therefore, the reported solutions should not be interpreted as the best achievable results for each benchmark instance.
    
 **3) Time Limit Selection:** The time limits evaluated in this study were selected empirically and are not guaranteed to represent the point of true convergence for every benchmark instance. Although additional runtime produced little or no improvement for most tested instances, longer searches may still discover better solutions for certain instances. Therefore, the reported results should be interpreted as the best solutions obtained within the specified computational budgets rather than the best achievable solutions using Google OR-Tools.
+
+        
+## License
+         
+Copyright © 2026 Jenny Xue. All rights reserved.
+         
+This repository is made publicly available for portfolio and demonstration purposes only. 
+       
+No part of this repository, including the source code, documentation, figures, and other contents, may be copied, modified, distributed, or used without the prior written permission of the copyright holder.
