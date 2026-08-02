@@ -342,7 +342,7 @@ Overall, these findings highlight both the strengths and limitations of OR-Tools
         
 ## License
          
-Copyright © 2026 Jenny Xue. All rights reserved.
+Copyright © 2026 Jiayi Xue. All rights reserved.
          
 This repository is made publicly available for portfolio and demonstration purposes only. 
        
