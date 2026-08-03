@@ -324,7 +324,10 @@ For B-n41-k6, both `Path Cheapest Arc` and `Local Cheapest Insertion` yield to t
 
 **Increase Time Limit helps to improve solution quality until the search reaches a plateau.**      
 The effect of increasing the time limit depends on the benchmark instance. For most benchmark instances in this study, extending the runtime resulted in negligible improvement because high-quality solutions were already obtained within the default 60-second limit. However, for the more challenging X-n129-k18 instance, additional search time enabled Google OR-Tools to continue refining candidate solutions, leading to significant improvements before the objective value eventually stabilized. Once the search reached this plateau, further increases in runtime provided little or no additional benefit. These results highlight the trade-off between computational time and solution quality.
-   
+
+**Runtime Can Change Heuristic Performance Ranking.**      
+The relative performance of first-solution construction heuristics is not fixed and may change as the runtime increases. Strategies that initially produced weaker solutions under a short computational budget continued to improve with extended search and, in some cases, outperformed strategies that initially ranked higher. This finding suggests that the effectiveness of a first-solution heuristic should be evaluated together with the reasonable search time.
+      
 ## Conclusion
      
 The benchmark results demonstrate that the Google OR-Tools Routing Solver can produce solutions that are highly competitive with published CVRPLIB best-known solutions using heuristic search. However, solution quality varied across benchmark instances and search configurations. While `Guided Local Search` consistently provided the strongest improvements among the tested metaheuristics, no single first-solution construction heuristic consistently outperformed the others across all benchmark instances. The runtime analysis further showed that the impact of increasing the time limit depends on the problem instance: Most benchmark instances achieved near-best solutions within the default computational budget, whereas more challenging instances continued to improve with additional search time before reaching a point at which no further improvement was observed within the tested limits. 
